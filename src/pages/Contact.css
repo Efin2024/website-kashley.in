@@ -1,0 +1,221 @@
+.contact-page {
+  padding-top: 100px;
+  background: var(--bg-section);
+  min-height: 80vh;
+}
+
+.contact-header {
+  margin-bottom: 64px;
+}
+
+.contact-title {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  color: var(--navy);
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.contact-subtitle {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-wrapper {
+  display: flex;
+  background: var(--bg-white);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  margin-bottom: 100px;
+}
+
+/* Info Side */
+.contact-info-card {
+  flex: 1;
+  background: var(--navy);
+  color: white;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-card-title {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  color: white;
+}
+
+.contact-card-desc {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.contact-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.contact-icon-wrapper {
+  background: rgba(242, 102, 34, 0.1);
+  color: var(--orange);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 4px;
+}
+
+.contact-value {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: white;
+  line-height: 1.5;
+}
+
+.contact-value:hover {
+  color: var(--orange);
+}
+
+.contact-map-wrapper {
+  margin-top: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  flex-grow: 1;
+  min-height: 250px;
+}
+
+/* Form Side */
+.contact-form-card {
+  flex: 1.5;
+  background: var(--bg-white);
+}
+
+.form-inner {
+  padding: 64px 48px;
+  height: 100%;
+}
+
+.form-heading {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--navy);
+  margin-bottom: 32px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-row {
+  display: flex;
+  gap: 24px;
+}
+
+.input-group {
+  flex: 1;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid rgba(30, 42, 94, 0.15);
+  border-radius: var(--radius-md);
+  background: var(--bg-cream);
+  font-size: 1rem;
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  transition: var(--transition-fast);
+}
+
+.input-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%231E2A5E%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px top 50%;
+  background-size: 12px auto;
+  padding-right: 40px;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+  border-color: var(--orange);
+  background: var(--bg-white);
+  box-shadow: 0 0 0 3px rgba(242, 102, 34, 0.1);
+  outline: none;
+}
+
+.form-submit {
+  padding: 16px;
+  font-size: 1.1rem;
+  margin-top: 16px;
+}
+
+@media (max-width: 968px) {
+  .contact-wrapper {
+    flex-direction: column;
+  }
+  
+  .contact-info-card,
+  .form-inner {
+    padding: 40px 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-title {
+    font-size: 2.5rem;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .contact-info-card,
+  .form-inner {
+    padding: 32px 20px;
+  }
+}

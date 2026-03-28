@@ -1,0 +1,186 @@
+.emergency-cta {
+  padding: var(--section-padding);
+  background: var(--bg-cream);
+}
+
+.emergency-cta__card {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  background: var(--bg-white);
+  border-radius: var(--radius-xl);
+  padding: 64px;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(242, 102, 34, 0.1);
+}
+
+.emergency-cta__content {
+  flex: 1.2;
+}
+
+.mb-6 {
+  margin-bottom: 24px;
+}
+
+.text-orange {
+  color: var(--orange);
+}
+
+.emergency-cta__title {
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.15;
+  margin-bottom: 24px;
+  letter-spacing: -0.01em;
+}
+
+.emergency-cta__desc {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.emergency-cta__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+
+.emergency-cta__list li {
+  font-size: 1.05rem;
+  color: var(--navy);
+  font-weight: 600;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.emergency-cta__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.emergency-cta__btn {
+  font-size: 1.15rem;
+  padding: 18px 48px;
+  box-shadow: 0 6px 20px rgba(242, 102, 34, 0.3);
+}
+
+.emergency-cta__note {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.emergency-cta__visual {
+  flex: 1;
+  position: relative;
+}
+
+.emergency-cta__image-frame {
+  position: relative;
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: visible;
+}
+
+.emergency-cta__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.emergency-cta__testimonial {
+  position: absolute;
+  bottom: -24px;
+  right: -24px;
+  background: white;
+  padding: 24px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-xl);
+  max-width: 280px;
+  z-index: 10;
+  border-left: 4px solid var(--orange);
+}
+
+.testimonial__stars {
+  color: #F59E0B;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.testimonial__text {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  font-style: italic;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.testimonial__author {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+@media (max-width: 1024px) {
+  .emergency-cta__card {
+    padding: 48px 32px;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 968px) {
+  .emergency-cta__title {
+    font-size: 2.2rem;
+  }
+  
+  .emergency-cta__card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .emergency-cta__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .emergency-cta__list li {
+    justify-content: center;
+  }
+  
+  .emergency-cta__actions {
+    align-items: center;
+  }
+
+  .emergency-cta__testimonial {
+    bottom: -20px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 90%;
+  }
+}
+
+@media (max-width: 640px) {
+  .emergency-cta__card {
+    padding: 32px 20px;
+    margin-bottom: 40px;
+  }
+  
+  .emergency-cta__title {
+    font-size: 1.8rem;
+  }
+}
