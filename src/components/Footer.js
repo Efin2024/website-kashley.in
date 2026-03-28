@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { HiMail, HiPhone, HiLocationMarker } from 'react-icons/hi';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/landing'; // Using react-icons/fa instead of landing
 import { FaFacebookF, FaTwitter as FaTwitterAlt, FaInstagram as FaInsta, FaLinkedinIn } from 'react-icons/fa';
 import './Footer.css';
 

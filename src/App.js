@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import AuthModal from './components/AuthModal';
 import Home from './pages/Home';
 import About from './pages/About';
 import LoanCalculator from './pages/LoanCalculator';
@@ -20,11 +21,23 @@ function ScrollToTop() {
 }
 
 function App() {
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+  const [authModalType, setAuthModalType] = useState('login');
+
+  const openAuthModal = (type = 'login') => {
+    setAuthModalType(type);
+    setIsAuthModalOpen(true);
+  };
+
+  const closeAuthModal = () => {
+    setIsAuthModalOpen(false);
+  };
+
   return (
     <Router>
       <ScrollToTop />
       <div className="App">
-        <Navbar />
+        <Navbar openAuthModal={openAuthModal} />
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -44,6 +57,11 @@ function App() {
           </Routes>
         </main>
         <Footer />
+        <AuthModal 
+          isOpen={isAuthModalOpen} 
+          onClose={closeAuthModal} 
+          initialType={authModalType} 
+        />
       </div>
     </Router>
   );

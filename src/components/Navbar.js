@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
 import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ openAuthModal }) => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -44,14 +44,14 @@ const Navbar = () => {
           <NavLink to="/repay" className={({isActive}) => `navbar__link ${isActive ? 'navbar__link--active' : ''}`} onClick={closeMenu}>Repay Now</NavLink>
           
           <div className="navbar__auth-mobile">
-            <a href="https://app.qualoan.com" className="btn-login" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>Login</a>
-            <a href="https://app.qualoan.com" className="btn-signup" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>Sign Up</a>
+            <button className="btn-login" onClick={() => { closeMenu(); openAuthModal('login'); }}>Login</button>
+            <button className="btn-signup" onClick={() => { closeMenu(); openAuthModal('signup'); }}>Sign Up</button>
           </div>
         </div>
 
         <div className="navbar__auth">
-          <a href="https://app.qualoan.com" className="btn-login" target="_blank" rel="noopener noreferrer">Login</a>
-          <a href="https://app.qualoan.com" className="btn-signup" target="_blank" rel="noopener noreferrer">Sign Up</a>
+          <button className="btn-login" onClick={() => openAuthModal('login')}>Login</button>
+          <button className="btn-signup" onClick={() => openAuthModal('signup')}>Sign Up</button>
         </div>
 
         <button className="navbar__toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
