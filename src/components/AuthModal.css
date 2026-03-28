@@ -76,237 +76,23 @@
 
 .auth-gamified-panel {
   position: relative;
-  padding: 52px 46px 42px;
   background:
     radial-gradient(circle at 20% 20%, rgba(255, 186, 143, 0.28), transparent 30%),
     linear-gradient(160deg, #111c4f 0%, #1b2f72 48%, #0e1b4a 100%);
   color: #fff;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+  min-height: 100%;
 }
 
-.gamified-orb {
-  position: absolute;
-  border-radius: 999px;
-  filter: blur(6px);
-  opacity: 0.8;
-}
-
-.gamified-orb-one {
-  width: 240px;
-  height: 240px;
-  background: rgba(242, 102, 34, 0.28);
-  top: -70px;
-  left: -30px;
-}
-
-.gamified-orb-two {
-  width: 320px;
-  height: 320px;
-  background: rgba(102, 168, 255, 0.22);
-  right: -90px;
-  bottom: 130px;
-}
-
-.gamified-grid {
+.auth-side-video {
   position: absolute;
   inset: 0;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
-  background-size: 28px 28px;
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent 72%);
-  pointer-events: none;
-}
-
-.gamified-content,
-.mascot-showcase {
-  position: relative;
-  z-index: 1;
-}
-
-.gamified-content {
-  max-width: 450px;
-}
-
-.gamified-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  backdrop-filter: blur(10px);
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.gamified-title {
-  margin-top: 18px;
-  font-family: var(--font-display);
-  font-size: clamp(2rem, 2.6vw, 3rem);
-  line-height: 1.04;
-  letter-spacing: -0.04em;
-}
-
-.gamified-desc {
-  margin-top: 14px;
-  font-size: 0.98rem;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.82);
-}
-
-.gamified-highlights {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 20px;
-}
-
-.highlight-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 14px;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(10px);
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.92);
-}
-
-.highlight-icon {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(242, 102, 34, 0.18);
-  color: #ffd0b8;
-}
-
-.gamified-stats {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-  margin-top: auto;
-  position: relative;
-  z-index: 1;
-}
-
-.stat-card {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding: 18px 16px;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(14px);
-}
-
-.stat-card strong {
-  font-size: 1.3rem;
-  font-weight: 800;
-}
-
-.stat-card span {
-  font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.74);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-
-.mascot-showcase {
-  margin-top: 0;
-}
-
-.showcase-halo {
-  position: absolute;
-  right: 62px;
-  bottom: 34px;
-  width: 290px;
-  height: 290px;
-  border-radius: 50%;
-  background:
-    radial-gradient(circle, rgba(255, 154, 90, 0.85) 0%, rgba(255, 154, 90, 0.18) 42%, rgba(255, 154, 90, 0) 72%);
-  filter: blur(10px);
-}
-
-.showcase-card {
-  position: relative;
-  min-height: 360px;
-  border-radius: 30px;
-  padding: 24px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.04) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  backdrop-filter: blur(12px);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16);
-  overflow: hidden;
-}
-
-.showcase-copy {
-  max-width: 220px;
-  position: relative;
-  z-index: 1;
-}
-
-.showcase-kicker {
-  display: inline-flex;
-  margin-bottom: 10px;
-  padding: 6px 10px;
-  border-radius: 999px;
-  background: rgba(242, 102, 34, 0.18);
-  color: #ffd4bf;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.showcase-copy strong {
-  display: block;
-  font-size: 1.5rem;
-  line-height: 1.1;
-}
-
-.showcase-copy p {
-  margin-top: 10px;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.78);
-}
-
-.showcase-media-shell {
-  position: absolute;
-  right: 18px;
-  top: 18px;
-  width: min(56%, 320px);
-  height: calc(100% - 36px);
-  border-radius: 26px;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  background: rgba(7, 13, 38, 0.28);
-  box-shadow: 0 18px 30px rgba(4, 9, 26, 0.28);
-  pointer-events: none;
-  animation: float 6.5s ease-in-out infinite;
-}
-
-.showcase-video {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
   display: block;
-  filter: saturate(1.08) contrast(1.06);
+  filter: saturate(1.08) contrast(1.06) brightness(0.92);
 }
 
 .auth-form-panel {
@@ -636,20 +422,7 @@
   }
 
   .auth-gamified-panel {
-    padding-bottom: 28px;
-  }
-
-  .mascot-showcase {
-    margin-top: 0;
-  }
-
-  .showcase-card {
-    min-height: 300px;
-  }
-
-  .showcase-media-shell {
-    width: min(50%, 280px);
-    height: calc(100% - 36px);
+    min-height: 340px;
   }
 
   .auth-form-panel {
@@ -686,27 +459,8 @@
     align-items: flex-start;
   }
 
-  .showcase-card {
+  .auth-gamified-panel {
     min-height: 280px;
-    padding: 20px;
-  }
-
-  .showcase-copy {
-    max-width: 180px;
-  }
-
-  .showcase-media-shell {
-    width: 210px;
-    height: calc(100% - 28px);
-    right: 14px;
-    top: 14px;
-  }
-
-  .showcase-halo {
-    width: 220px;
-    height: 220px;
-    right: 20px;
-    bottom: 30px;
   }
 }
 
@@ -726,27 +480,7 @@
     width: 100%;
   }
 
-  .highlight-chip,
-  .auth-assurance span,
-  .stat-card {
-    width: 100%;
-  }
-
-  .showcase-card {
-    min-height: 320px;
-  }
-
-  .showcase-copy {
-    max-width: 100%;
-  }
-
-  .showcase-media-shell {
-    position: relative;
-    right: auto;
-    bottom: auto;
-    width: 100%;
-    height: 190px;
-    margin-top: 18px;
-    animation: none;
+  .auth-gamified-panel {
+    min-height: 220px;
   }
 }
