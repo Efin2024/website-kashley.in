@@ -1,5 +1,5 @@
 import React from 'react';
-import { HiOutlineUserGroup, HiOutlineShieldCheck, HiOutlineSparkles, HiOutlineClock } from 'react-icons/hi';
+import { HiOutlineUserGroup, HiOutlineShieldCheck, HiOutlineSparkles, HiOutlineClock, HiOutlineBadgeCheck } from 'react-icons/hi';
 import './WhyChoose.css';
 
 const WhyChoose = () => {
@@ -30,15 +30,20 @@ const WhyChoose = () => {
     <section className="why-choose">
       <div className="container">
         <div className="why-choose__header text-center">
+          <div className="why-choose__eyebrow">
+            <HiOutlineBadgeCheck />
+            Confidence Layer
+          </div>
           <h2 className="section-title">The Best Payday Loan in India</h2>
           <p className="section-subtitle">
-            Need cash urgently? We've stripped out the complications to give you exactly what you need: quick money at fair, transparent terms.
+            Need cash urgently? We stripped out the friction and surfaced the signals that matter, so every step feels clear, premium, and reassuring.
           </p>
         </div>
 
         <div className="why-choose__grid">
           {features.map((feature, i) => (
             <div key={i} className="why-choose__card" style={{ animationDelay: `${i * 0.15}s` }}>
+              <span className="why-choose__step">Proof 0{i + 1}</span>
               <div className="why-choose__icon">{feature.icon}</div>
               <h3 className="why-choose__title">{feature.title}</h3>
               <p className="why-choose__desc">{feature.desc}</p>

@@ -1,90 +1,207 @@
 import React from 'react';
-import { HiOutlineLightBulb, HiOutlineGlobeAlt, HiOutlineLightningBolt, HiOutlineShieldCheck, HiOutlineTrendingUp, HiOutlineUsers } from 'react-icons/hi';
-import WhyChoose from '../components/WhyChoose';
+import {
+  HiOutlineGlobeAlt,
+  HiOutlineLightBulb,
+  HiOutlineLightningBolt,
+  HiOutlineShieldCheck,
+  HiOutlineTrendingUp,
+  HiOutlineUsers,
+  HiSparkles
+} from 'react-icons/hi';
 import EmergencyCTA from '../components/EmergencyCTA';
 import './About.css';
+
+const principles = [
+  {
+    icon: <HiOutlineLightBulb size={34} />,
+    title: 'Our Mission',
+    desc: 'Democratize access to short-term credit with faster underwriting, clearer pricing, and a more humane borrower experience.'
+  },
+  {
+    icon: <HiOutlineGlobeAlt size={34} />,
+    title: 'Our Vision',
+    desc: 'Become the most trusted digital credit layer for urgent Indian financial moments, without the stress and opacity of legacy lending.'
+  }
+];
+
+const advantageCards = [
+  {
+    icon: <HiOutlineLightningBolt />,
+    title: 'AI-driven underwriting',
+    desc: 'Real-time decisioning allows QUA to move at product speed instead of branch speed.'
+  },
+  {
+    icon: <HiOutlineShieldCheck />,
+    title: 'Bank-grade trust',
+    desc: 'Security cues, encryption, and clear risk messaging are treated as product features, not footnotes.'
+  },
+  {
+    icon: <HiOutlineTrendingUp />,
+    title: 'Always-on disbursal rails',
+    desc: 'Integrated transfer systems help approved borrowers receive funds around the clock.'
+  },
+  {
+    icon: <HiOutlineUsers />,
+    title: 'Paper-light onboarding',
+    desc: 'A focused digital flow keeps identity verification and eligibility checks quick and understandable.'
+  }
+];
+
+const storyMoments = [
+  {
+    id: 'clarity',
+    label: 'Clarity First',
+    title: 'We remove the emotional noise around urgent borrowing.',
+    desc: 'Borrowers should not have to guess what happens next. We treat product clarity like a trust feature.'
+  },
+  {
+    id: 'trust',
+    label: 'Trust Surface',
+    title: 'We keep risk, pricing, and security signals visible.',
+    desc: 'That means less buried complexity and more confidence at every critical decision point.'
+  },
+  {
+    id: 'speed',
+    label: 'Speed Engine',
+    title: 'We use technology to shorten the time between stress and relief.',
+    desc: 'The goal is not just a fast loan. The goal is a calmer experience under pressure.'
+  }
+];
 
 const About = () => {
   return (
     <div className="page-enter about-page">
-      {/* About Hero */}
       <section className="about-hero">
-        <div className="about-hero__bg"></div>
         <div className="container about-hero__content">
-          <div className="badge badge-orange mb-6">About QUA Loan</div>
-          <h1 className="about-title">
-            Revolutionizing Access To <br />
-            <span className="text-orange">Instant Credit in India</span>
-          </h1>
-          <p className="about-subtitle">
-            We are a technology-driven fin-tech platform building the smartest and fastest way for Indians to access short-term credit, helping you overcome financial emergencies with dignity.
-          </p>
-        </div>
-      </section>
-
-      {/* Mission & Vision */}
-      <section className="mission-vision section-padding">
-        <div className="container">
-          <div className="mv-grid">
-            <div className="mv-card gradient-border-card">
-              <div className="gradient-border-card-inner">
-                <div className="mv-icon"><HiOutlineLightBulb size={36} /></div>
-                <h3>Our Mission</h3>
-                <p>
-                  To democratize access to credit for the underserved Indian population by leveraging alternative data and artificial intelligence, providing instant, fair, and transparent financial products.
-                </p>
+          <div className="eyebrow about-hero__eyebrow">
+            <HiSparkles />
+            Built as a product, not a paperwork maze
+          </div>
+          <div className="about-hero__grid">
+            <div>
+              <h1 className="about-title">We are redesigning how urgent credit feels.</h1>
+              <p className="about-subtitle">
+                QUA combines trust, speed, and transparent economics into a calmer lending experience for real-life emergencies. Instead of making users decode finance, we design clarity into the interface itself.
+              </p>
+              <div className="about-hero__ticker" aria-hidden="true">
+                <div className="about-hero__ticker-track">
+                  <span>Fast underwriting</span>
+                  <span>Clear pricing</span>
+                  <span>Visible trust cues</span>
+                  <span>Digital verification</span>
+                  <span>Fast underwriting</span>
+                  <span>Clear pricing</span>
+                  <span>Visible trust cues</span>
+                  <span>Digital verification</span>
+                </div>
               </div>
             </div>
-            
-            <div className="mv-card gradient-border-card">
-              <div className="gradient-border-card-inner">
-                <div className="mv-icon"><HiOutlineGlobeAlt size={36} /></div>
-                <h3>Our Vision</h3>
-                <p>
-                  To become India's most trusted and widely used micro-lending platform, fostering financial inclusion and empowering millions to navigate unexpected financial challenges without stress.
-                </p>
+            <div className="about-hero__visual">
+              <div className="about-hero__orb about-hero__orb--one"></div>
+              <div className="about-hero__orb about-hero__orb--two"></div>
+              <div className="about-hero__panel glass-panel">
+                <div className="about-hero__panel-top">
+                  <span>QUA confidence layer</span>
+                  <strong>10L+</strong>
+                </div>
+                <div className="about-hero__panel-grid">
+                  <div>
+                    <span>Average transfer</span>
+                    <strong>12 min</strong>
+                  </div>
+                  <div>
+                    <span>Pricing model</span>
+                    <strong>1% / day</strong>
+                  </div>
+                  <div>
+                    <span>Processing</span>
+                    <strong>24/7</strong>
+                  </div>
+                  <div>
+                    <span>Loan runway</span>
+                    <strong>₹1 Lakh</strong>
+                  </div>
+                </div>
+
+                <div className="about-hero__pulse-card about-hero__pulse-card--top">
+                  <span>Borrower trust</span>
+                  <strong>Visible at every step</strong>
+                </div>
+
+                <div className="about-hero__pulse-card about-hero__pulse-card--bottom">
+                  <span>Product approach</span>
+                  <strong>Designed for calm under pressure</strong>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Tech Advantage */}
-      <section className="tech-advantage">
+      <section className="about-principles">
         <div className="container">
-          <div className="tech-header">
+          <div className="about-principles__grid">
+            {principles.map((item) => (
+              <div key={item.title} className="about-principle-card">
+                <div className="about-principle-card__icon">{item.icon}</div>
+                <h3>{item.title}</h3>
+                <p>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="about-story">
+        <div className="container about-story__grid">
+          <div className="about-story__sticky">
+            <div className="about-story__copy">
+              <span className="about-story__kicker">Why this matters</span>
+              <h2>Credit products should reduce stress, not amplify it.</h2>
+              <p>
+                Traditional short-term lending often feels fragmented, uncertain, and overly procedural. QUA is built around one idea: urgent borrowing should feel guided, premium, and understandable from the first tap to repayment.
+              </p>
+              <p>
+                That philosophy shapes our product language, our risk communication, our digital verification flow, and the way we surface pricing and timelines.
+              </p>
+            </div>
+          </div>
+          <div className="about-story__timeline">
+            {storyMoments.map((moment, index) => (
+              <div className="about-story__step" key={moment.id}>
+                <strong>0{index + 1}</strong>
+                <div className="about-story__step-content">
+                  <span className="about-story__step-label">{moment.label}</span>
+                  <h3>{moment.title}</h3>
+                  <p>{moment.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="about-advantage">
+        <div className="container">
+          <div className="about-advantage__header">
             <h2 className="section-title">The QUA Technology Advantage</h2>
             <p className="section-subtitle">
-              How we dispense loans in 15 minutes when traditional banks take 15 days.
+              The operational layer behind the visual calm: better underwriting, stronger security, and faster money movement.
             </p>
           </div>
-          
-          <div className="tech-grid">
-            <div className="tech-card">
-              <div className="tech-icon"><HiOutlineLightningBolt /></div>
-              <h4>AI-Driven Underwriting</h4>
-              <p>Our proprietary ML models analyze 500+ data points in real-time to assess creditworthiness without relying solely on traditional CIBIL scores.</p>
-            </div>
-            <div className="tech-card">
-              <div className="tech-icon"><HiOutlineShieldCheck /></div>
-              <h4>Bank-Grade Security</h4>
-              <p>256-bit AES encryption ensures your personal and financial data is protected with the same technology used by top national banks.</p>
-            </div>
-            <div className="tech-card">
-              <div className="tech-icon"><HiOutlineTrendingUp /></div>
-              <h4>Automated Disbursal</h4>
-              <p>Integration with IMPS/NEFT APIs allows us to push funds directly into your verified bank account 24/7/365, even on bank holidays.</p>
-            </div>
-            <div className="tech-card">
-              <div className="tech-icon"><HiOutlineUsers /></div>
-              <h4>Paperless KYC</h4>
-              <p>Seamless integration with UIDAI, NSDL, and DigiLocker allows for instant identity verification without uploading physical documents.</p>
-            </div>
+
+          <div className="about-advantage__grid">
+            {advantageCards.map((card) => (
+              <div key={card.title} className="about-advantage__card">
+                <div className="about-advantage__icon">{card.icon}</div>
+                <h4>{card.title}</h4>
+                <p>{card.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <WhyChoose />
       <EmergencyCTA />
     </div>
   );

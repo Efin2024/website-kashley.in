@@ -1,10 +1,14 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import {
+  HiCheckCircle,
   HiEye,
   HiEyeOff,
+  HiOutlineClock,
   HiOutlineLockClosed,
   HiOutlineMail,
   HiOutlinePhone,
+  HiOutlineShieldCheck,
+  HiOutlineSparkles,
   HiOutlineUser,
   HiX
 } from 'react-icons/hi';
@@ -24,6 +28,12 @@ const initialSignupForm = {
   consent: true
 };
 
+const leftHighlights = [
+  { icon: <HiOutlineClock />, title: '12 min average', text: 'Designed for urgent money moments.' },
+  { icon: <HiOutlineShieldCheck />, title: 'Bank-grade security', text: 'Sensitive data stays protected end to end.' },
+  { icon: <HiCheckCircle />, title: 'Transparent pricing', text: 'Clear 1% per day logic with no hidden shocks.' }
+];
+
 const AuthModal = ({ isOpen, onClose, initialType = 'login' }) => {
   const [type, setType] = useState(initialType);
   const [isRendered, setIsRendered] = useState(false);
@@ -38,7 +48,6 @@ const AuthModal = ({ isOpen, onClose, initialType = 'login' }) => {
       setIsRendered(true);
       setType(initialType);
       document.body.style.overflow = 'hidden';
-
       const openTimer = setTimeout(() => setIsVisible(true), 10);
       return () => clearTimeout(openTimer);
     }
@@ -53,10 +62,14 @@ const AuthModal = ({ isOpen, onClose, initialType = 'login' }) => {
   }, [isOpen, initialType]);
 
   useEffect(() => {
-    if (!isOpen) return;
+    if (!isOpen) {
+      return undefined;
+    }
 
     const handleKeyDown = (event) => {
-      if (event.key === 'Escape') onClose();
+      if (event.key === 'Escape') {
+        onClose();
+      }
     };
 
     window.addEventListener('keydown', handleKeyDown);
@@ -65,7 +78,9 @@ const AuthModal = ({ isOpen, onClose, initialType = 'login' }) => {
 
   const passwordStrength = useMemo(() => {
     const password = signupForm.password;
-    if (!password) return { label: 'Add a password', score: 0 };
+    if (!password) {
+      return { label: 'Add a password', score: 0 };
+    }
 
     let score = 0;
     if (password.length >= 8) score += 1;
@@ -97,7 +112,9 @@ const AuthModal = ({ isOpen, onClose, initialType = 'login' }) => {
     setShowSignupPassword(false);
   };
 
-  if (!isRendered) return null;
+  if (!isRendered) {
+    return null;
+  }
 
   return (
     <div className={`auth-backdrop ${isVisible ? 'visible' : ''}`} onClick={onClose}>
@@ -113,7 +130,6 @@ const AuthModal = ({ isOpen, onClose, initialType = 'login' }) => {
         </button>
 
         <div className="auth-layout">
-          {/* LEFT SIDE - VIDEO */}
           <div className="auth-gamified-panel">
             <video
               className="auth-side-video"
@@ -122,57 +138,71 @@ const AuthModal = ({ isOpen, onClose, initialType = 'login' }) => {
               loop
               muted
               playsInline
-              aria-label="Promotional dancing video"
+              aria-label="Promotional background video"
             />
             <div className="auth-video-overlay-gradient"></div>
-            
             <div className="auth-video-content">
-              <div className="video-badge">Secure Gateway</div>
-              <h2 className="video-title">Welcome to the<br/>Future of Finance</h2>
-              <p className="video-desc">Join 10L+ users experiencing instant, secure, and hassle-free payday loans.</p>
-              
-              <div className="video-pills">
-                <span>Fast Approval</span>
-                <span>Bank-Grade Security</span>
+              <div className="video-badge">
+                <HiOutlineSparkles />
+                Secure gateway
+              </div>
+              <h2 className="video-title">Fast money should still feel calm, premium, and safe.</h2>
+              <p className="video-desc">
+                QUA is designed like a guided product flow, so every login, signup, and verification moment feels clearer and more reassuring.
+              </p>
+
+              <div className="auth-metric-strip">
+                <div>
+                  <strong>10L+</strong>
+                  <span>Borrowers served</span>
+                </div>
+                <div>
+                  <strong>1%</strong>
+                  <span>Daily pricing</span>
+                </div>
+                <div>
+                  <strong>24/7</strong>
+                  <span>Processing</span>
+                </div>
+              </div>
+
+              <div className="auth-highlight-list">
+                {leftHighlights.map((item) => (
+                  <div key={item.title} className="auth-highlight-item">
+                    <span className="auth-highlight-icon">{item.icon}</span>
+                    <div>
+                      <strong>{item.title}</strong>
+                      <span>{item.text}</span>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
 
-          {/* RIGHT SIDE - FORM */}
           <div className="auth-form-panel">
             <div className="auth-form-inner">
-              
-              {/* TABS */}
               <div className="auth-tabs-wrapper">
                 <div className="auth-tabs" role="tablist">
-                  <button
-                    className={`auth-tab ${type === 'login' ? 'active' : ''}`}
-                    onClick={() => handleTypeChange('login')}
-                    type="button"
-                  >
+                  <button className={`auth-tab ${type === 'login' ? 'active' : ''}`} onClick={() => handleTypeChange('login')} type="button">
                     Log In
                   </button>
-                  <button
-                    className={`auth-tab ${type === 'signup' ? 'active' : ''}`}
-                    onClick={() => handleTypeChange('signup')}
-                    type="button"
-                  >
+                  <button className={`auth-tab ${type === 'signup' ? 'active' : ''}`} onClick={() => handleTypeChange('signup')} type="button">
                     Sign Up
                   </button>
                 </div>
               </div>
 
-              {/* DYNAMIC FORM AREA */}
               <div className="auth-form-container">
                 {type === 'login' ? (
                   <div className="auth-form-slide">
                     <div className="auth-header">
-                      <h3 className="auth-heading">Welcome Back</h3>
-                      <p className="auth-subheading">Enter your details to access your dashboard.</p>
+                      <span className="auth-kicker">Access your dashboard</span>
+                      <h3 id="auth-modal-title" className="auth-heading">Welcome back</h3>
+                      <p className="auth-subheading">Pick up your loan journey, review status updates, and move through repayment or renewal with clarity.</p>
                     </div>
 
                     <form className="auth-form" onSubmit={(event) => event.preventDefault()}>
-                      
                       <div className="input-group">
                         <label className="input-label">Mobile Number</label>
                         <div className="input-shell">
@@ -218,21 +248,18 @@ const AuthModal = ({ isOpen, onClose, initialType = 'login' }) => {
                           />
                           Keep me signed in
                         </label>
-                        <a href="/" className="forgot-link" onClick={(event) => event.preventDefault()}>
-                          Forgot Password?
-                        </a>
+                        <button type="button" className="forgot-link">Forgot password?</button>
                       </div>
 
-                      <button type="submit" className="btn btn-primary w-100 auth-submit">
-                        Secure Login
-                      </button>
+                      <button type="submit" className="btn btn-primary w-100 auth-submit">Secure Login</button>
                     </form>
                   </div>
                 ) : (
                   <div className="auth-form-slide">
                     <div className="auth-header">
-                      <h3 className="auth-heading">Create Account</h3>
-                      <p className="auth-subheading">Takes less than a minute to get started.</p>
+                      <span className="auth-kicker">Create your fast lane</span>
+                      <h3 id="auth-modal-title" className="auth-heading">Open your QUA account</h3>
+                      <p className="auth-subheading">This onboarding flow is built to feel light: essential details, a clear password signal, and no unnecessary friction.</p>
                     </div>
 
                     <form className="auth-form" onSubmit={(event) => event.preventDefault()}>
@@ -243,7 +270,7 @@ const AuthModal = ({ isOpen, onClose, initialType = 'login' }) => {
                             <div className="input-icon"><HiOutlineUser size={20} /></div>
                             <input
                               type="text"
-                              placeholder="Name as per PAN Card"
+                              placeholder="Name as per PAN card"
                               value={signupForm.fullName}
                               onChange={(event) => updateSignupForm('fullName', event.target.value)}
                               required
@@ -285,16 +312,12 @@ const AuthModal = ({ isOpen, onClose, initialType = 'login' }) => {
                             <div className="input-icon"><HiOutlineLockClosed size={20} /></div>
                             <input
                               type={showSignupPassword ? 'text' : 'password'}
-                              placeholder="8+ chars with number/symbol"
+                              placeholder="8+ chars with number and symbol"
                               value={signupForm.password}
                               onChange={(event) => updateSignupForm('password', event.target.value)}
                               required
                             />
-                            <button
-                              type="button"
-                              className="password-toggle"
-                              onClick={() => setShowSignupPassword((curr) => !curr)}
-                            >
+                            <button type="button" className="password-toggle" onClick={() => setShowSignupPassword((curr) => !curr)} aria-label={showSignupPassword ? 'Hide password' : 'Show password'}>
                               {showSignupPassword ? <HiEyeOff size={20} /> : <HiEye size={20} />}
                             </button>
                           </div>
@@ -304,14 +327,11 @@ const AuthModal = ({ isOpen, onClose, initialType = 'login' }) => {
                       {signupForm.password && (
                         <div className="password-strength">
                           <div className="strength-meta">
-                            <span>Password strength:</span>
+                            <span>Password strength</span>
                             <strong>{passwordStrength.label}</strong>
                           </div>
                           <div className="strength-track">
-                            <span
-                              className="strength-fill"
-                              style={{ width: `${passwordStrength.score * 25}%` }}
-                            ></span>
+                            <span className="strength-fill" style={{ width: `${passwordStrength.score * 25}%` }}></span>
                           </div>
                         </div>
                       )}
@@ -325,9 +345,7 @@ const AuthModal = ({ isOpen, onClose, initialType = 'login' }) => {
                         <span>I accept the Terms & Conditions and Privacy Policy.</span>
                       </label>
 
-                      <button type="submit" className="btn btn-primary w-100 auth-submit">
-                        Verify & Sign Up
-                      </button>
+                      <button type="submit" className="btn btn-primary w-100 auth-submit">Verify & Sign Up</button>
                     </form>
                   </div>
                 )}

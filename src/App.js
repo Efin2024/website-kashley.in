@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import AuthModal from './components/AuthModal';
+import FoxMascot from './components/FoxMascot';
 import Home from './pages/Home';
 import About from './pages/About';
 import LoanCalculator from './pages/LoanCalculator';
@@ -18,6 +19,11 @@ function ScrollToTop() {
     window.scrollTo(0, 0);
   }, [pathname]);
   return null;
+}
+
+function RouteFoxMascot() {
+  const { pathname } = useLocation();
+  return <FoxMascot pathname={pathname} />;
 }
 
 function App() {
@@ -38,6 +44,7 @@ function App() {
       <ScrollToTop />
       <div className="App">
         <Navbar openAuthModal={openAuthModal} />
+        <RouteFoxMascot />
         <main>
           <Routes>
             <Route path="/" element={<Home />} />

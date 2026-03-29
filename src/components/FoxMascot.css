@@ -1,0 +1,326 @@
+.fox-mascot {
+  position: fixed;
+  z-index: 950;
+  pointer-events: none;
+  transition: transform 0.85s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.28s ease;
+}
+
+.fox-mascot--bottom-right {
+  right: 20px;
+  bottom: 20px;
+}
+
+.fox-mascot--bottom-left {
+  left: 18px;
+  bottom: 24px;
+}
+
+.fox-mascot--mid-right {
+  right: 20px;
+  bottom: 172px;
+}
+
+.fox-mascot--upper-right {
+  right: 20px;
+  bottom: 286px;
+}
+
+.fox-mascot--lower-center {
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+}
+
+.fox-mascot__collapse,
+.fox-mascot__next {
+  pointer-events: auto;
+}
+
+.fox-mascot__collapse {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  z-index: 3;
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(20, 29, 69, 0.94);
+  color: white;
+  box-shadow: 0 12px 28px rgba(20, 29, 69, 0.18);
+}
+
+.fox-mascot__dock {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.fox-mascot__speech {
+  position: relative;
+  transition: opacity 0.26s ease, transform 0.26s ease;
+}
+
+.fox-mascot__speech--hidden {
+  opacity: 0;
+  transform: translateY(8px) scale(0.97);
+}
+
+.fox-mascot__speech-dot {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.97);
+  border: 1px solid rgba(20, 29, 69, 0.06);
+  box-shadow: 0 10px 20px rgba(20, 29, 69, 0.08);
+}
+
+.fox-mascot__speech-dot--one {
+  width: 18px;
+  height: 18px;
+  right: -8px;
+  bottom: 120px;
+}
+
+.fox-mascot__speech-dot--two {
+  width: 11px;
+  height: 11px;
+  right: -18px;
+  bottom: 102px;
+}
+
+.fox-mascot--bottom-left .fox-mascot__dock {
+  flex-direction: row-reverse;
+}
+
+.fox-mascot--bottom-left .fox-mascot__speech-dot--one {
+  right: auto;
+  left: -8px;
+}
+
+.fox-mascot--bottom-left .fox-mascot__speech-dot--two {
+  right: auto;
+  left: -18px;
+}
+
+.fox-mascot__panel {
+  width: 282px;
+  padding: 14px 16px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(20, 29, 69, 0.08);
+  box-shadow: 0 22px 50px rgba(20, 29, 69, 0.14);
+  backdrop-filter: blur(14px);
+  pointer-events: auto;
+}
+
+.fox-mascot__panel-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.fox-mascot__badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(242, 102, 34, 0.1);
+  color: var(--orange-dark);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.fox-mascot__name {
+  color: var(--navy);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.fox-mascot__message {
+  color: var(--navy-dark);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+.fox-mascot__panel-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.fox-mascot__progress {
+  display: flex;
+  gap: 6px;
+}
+
+.fox-mascot__progress span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(20, 29, 69, 0.18);
+}
+
+.fox-mascot__progress span.active {
+  background: var(--orange);
+}
+
+.fox-mascot__next {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  background: transparent;
+  color: var(--orange-dark);
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.fox-mascot__avatar {
+  width: 164px;
+  height: 176px;
+  display: grid;
+  place-items: center;
+  background: transparent;
+}
+
+.fox-mark {
+  width: 142px;
+  height: 156px;
+  animation: foxMarkFloat 3.2s ease-in-out infinite;
+}
+
+.fox-mark__shadow {
+  fill: rgba(20, 29, 69, 0.08);
+}
+
+.fox-mark__orange {
+  fill: #f26d5b;
+}
+
+.fox-mark__orange-light {
+  fill: #f48772;
+}
+
+.fox-mark__orange-mid {
+  fill: #d65d4d;
+}
+
+.fox-mark__orange-dark {
+  fill: #c94e46;
+}
+
+.fox-mark__cream {
+  fill: #e9e9eb;
+}
+
+.fox-mark__cream-dark {
+  fill: #d4d3d8;
+}
+
+.fox-mark__teal {
+  fill: #5da4dc;
+}
+
+.fox-mark__teal-light {
+  fill: #54b8df;
+}
+
+.fox-mark__teal-dark {
+  fill: #39aa9c;
+}
+
+.fox-mark__blue {
+  fill: #5f7fc5;
+}
+
+.fox-mark__blue-dark {
+  fill: #5e64ad;
+}
+
+.fox-mark__cyan {
+  fill: #57c4e0;
+}
+
+.fox-mark__purple {
+  fill: #5e4ea5;
+}
+
+.fox-mark__boot {
+  fill: #7c5c56;
+}
+
+.fox-mark__boot-dark {
+  fill: #9d7a6e;
+}
+
+.fox-mark__sword {
+  fill: #54c3e0;
+}
+
+.fox-mark__badge {
+  fill: #f5f8fb;
+}
+
+.fox-mark__eye,
+.fox-mark__nose {
+  fill: #40424a;
+}
+
+@keyframes foxMarkFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@media (max-width: 900px) {
+  .fox-mascot {
+    right: 14px !important;
+    left: auto !important;
+    bottom: 14px !important;
+    transform: none !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .fox-mascot__avatar {
+    width: 132px;
+    height: 144px;
+  }
+
+  .fox-mascot__panel {
+    width: 220px;
+    padding: 12px 14px;
+  }
+
+  .fox-mascot__message {
+    font-size: 0.82rem;
+  }
+
+  .fox-mark {
+    width: 114px;
+    height: 128px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fox-mascot,
+  .fox-mascot * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { HiMenuAlt3, HiX } from 'react-icons/hi';
+import { HiMenuAlt3, HiSparkles, HiX } from 'react-icons/hi';
 import './Navbar.css';
 
 const Navbar = ({ openAuthModal }) => {
@@ -15,7 +15,9 @@ const Navbar = ({ openAuthModal }) => {
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : '';
-    return () => { document.body.style.overflow = ''; };
+    return () => {
+      document.body.style.overflow = '';
+    };
   }, [menuOpen]);
 
   const closeMenu = () => setMenuOpen(false);
@@ -25,33 +27,44 @@ const Navbar = ({ openAuthModal }) => {
       <div className="navbar__container">
         <Link to="/" className="navbar__logo" onClick={closeMenu}>
           <div className="navbar__logo-icon">
-            <svg width="36" height="36" viewBox="0 0 40 40" fill="none">
-              <circle cx="20" cy="20" r="18" stroke="#F26622" strokeWidth="2.5" fill="none"/>
+            <svg width="38" height="38" viewBox="0 0 40 40" fill="none">
+              <circle cx="20" cy="20" r="18" stroke="#F26622" strokeWidth="2.5" fill="none" />
               <text x="20" y="26" textAnchor="middle" fill="#F26622" fontWeight="800" fontSize="16" fontFamily="Plus Jakarta Sans, sans-serif">Q</text>
             </svg>
           </div>
           <div className="navbar__logo-text">
             <span className="navbar__logo-title">QUA</span>
-            <span className="navbar__logo-tagline">QUICK URGENT ASSURED</span>
+            <span className="navbar__logo-tagline">Quick Urgent Assured</span>
           </div>
         </Link>
 
         <div className={`navbar__links ${menuOpen ? 'navbar__links--open' : ''}`}>
-          <NavLink to="/" className={({isActive}) => `navbar__link ${isActive ? 'navbar__link--active' : ''}`} onClick={closeMenu} end>Home</NavLink>
-          <NavLink to="/about" className={({isActive}) => `navbar__link ${isActive ? 'navbar__link--active' : ''}`} onClick={closeMenu}>About Us</NavLink>
-          <NavLink to="/loan-calculator" className={({isActive}) => `navbar__link ${isActive ? 'navbar__link--active' : ''}`} onClick={closeMenu}>Loan Calculator</NavLink>
-          <NavLink to="/contact" className={({isActive}) => `navbar__link ${isActive ? 'navbar__link--active' : ''}`} onClick={closeMenu}>Contact Us</NavLink>
-          <NavLink to="/repay" className={({isActive}) => `navbar__link ${isActive ? 'navbar__link--active' : ''}`} onClick={closeMenu}>Repay Now</NavLink>
-          
+          <div className="navbar__links-inner">
+            <NavLink to="/" className={({ isActive }) => `navbar__link ${isActive ? 'navbar__link--active' : ''}`} onClick={closeMenu} end>Home</NavLink>
+            <NavLink to="/about" className={({ isActive }) => `navbar__link ${isActive ? 'navbar__link--active' : ''}`} onClick={closeMenu}>About</NavLink>
+            <NavLink to="/loan-calculator" className={({ isActive }) => `navbar__link ${isActive ? 'navbar__link--active' : ''}`} onClick={closeMenu}>Calculator</NavLink>
+            <NavLink to="/contact" className={({ isActive }) => `navbar__link ${isActive ? 'navbar__link--active' : ''}`} onClick={closeMenu}>Contact</NavLink>
+            <NavLink to="/faq" className={({ isActive }) => `navbar__link ${isActive ? 'navbar__link--active' : ''}`} onClick={closeMenu}>FAQ</NavLink>
+            <NavLink to="/repay" className={({ isActive }) => `navbar__link ${isActive ? 'navbar__link--active' : ''}`} onClick={closeMenu}>Repay</NavLink>
+          </div>
+
           <div className="navbar__auth-mobile">
+            <div className="navbar__mini-note">
+              <HiSparkles />
+              Fast approvals with transparent pricing
+            </div>
             <button className="btn-login" onClick={() => { closeMenu(); openAuthModal('login'); }}>Login</button>
-            <button className="btn-signup" onClick={() => { closeMenu(); openAuthModal('signup'); }}>Sign Up</button>
+            <button className="btn-signup" onClick={() => { closeMenu(); openAuthModal('signup'); }}>Start Now</button>
           </div>
         </div>
 
         <div className="navbar__auth">
+          <div className="navbar__meta-pill">
+            <HiSparkles />
+            15 min average transfer
+          </div>
           <button className="btn-login" onClick={() => openAuthModal('login')}>Login</button>
-          <button className="btn-signup" onClick={() => openAuthModal('signup')}>Sign Up</button>
+          <button className="btn-signup" onClick={() => openAuthModal('signup')}>Start Now</button>
         </div>
 
         <button className="navbar__toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
