@@ -27,10 +27,10 @@ const Footer = () => {
               Get cash up to ₹1,00,000 in your account within 15 minutes.
             </p>
             <div className="footer__socials">
-              <a href="#" aria-label="Facebook"><FaFacebookF /></a>
-              <a href="#" aria-label="Twitter"><FaTwitterAlt /></a>
-              <a href="#" aria-label="Instagram"><FaInsta /></a>
-              <a href="#" aria-label="LinkedIn"><FaLinkedinIn /></a>
+              <button type="button" aria-label="Facebook"><FaFacebookF /></button>
+              <button type="button" aria-label="Twitter"><FaTwitterAlt /></button>
+              <button type="button" aria-label="Instagram"><FaInsta /></button>
+              <button type="button" aria-label="LinkedIn"><FaLinkedinIn /></button>
             </div>
           </div>
 

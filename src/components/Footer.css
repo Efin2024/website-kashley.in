@@ -37,7 +37,8 @@
   gap: 16px;
 }
 
-.footer__socials a {
+.footer__socials a,
+.footer__socials button {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -47,9 +48,13 @@
   justify-content: center;
   color: white;
   transition: var(--transition-smooth);
+  border: 0;
+  padding: 0;
+  cursor: pointer;
 }
 
-.footer__socials a:hover {
+.footer__socials a:hover,
+.footer__socials button:hover {
   background: var(--orange);
   transform: translateY(-4px);
 }
