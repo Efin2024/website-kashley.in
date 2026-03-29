@@ -53,14 +53,10 @@ const AuthModal = ({ isOpen, onClose, initialType = 'login' }) => {
   }, [isOpen, initialType]);
 
   useEffect(() => {
-    if (!isOpen) {
-      return undefined;
-    }
+    if (!isOpen) return;
 
     const handleKeyDown = (event) => {
-      if (event.key === 'Escape') {
-        onClose();
-      }
+      if (event.key === 'Escape') onClose();
     };
 
     window.addEventListener('keydown', handleKeyDown);
@@ -69,10 +65,7 @@ const AuthModal = ({ isOpen, onClose, initialType = 'login' }) => {
 
   const passwordStrength = useMemo(() => {
     const password = signupForm.password;
-
-    if (!password) {
-      return { label: 'Add a password', score: 0 };
-    }
+    if (!password) return { label: 'Add a password', score: 0 };
 
     let score = 0;
     if (password.length >= 8) score += 1;
@@ -120,34 +113,38 @@ const AuthModal = ({ isOpen, onClose, initialType = 'login' }) => {
         </button>
 
         <div className="auth-layout">
+          {/* LEFT SIDE - VIDEO */}
           <div className="auth-gamified-panel">
             <video
               className="auth-side-video"
-              src="/danceman.mov"
+              src="/dancedance.mov"
               autoPlay
               loop
               muted
               playsInline
-              aria-label="Promotional dancing man video"
+              aria-label="Promotional dancing video"
             />
+            <div className="auth-video-overlay-gradient"></div>
+            
+            <div className="auth-video-content">
+              <div className="video-badge">Secure Gateway</div>
+              <h2 className="video-title">Welcome to the<br/>Future of Finance</h2>
+              <p className="video-desc">Join 10L+ users experiencing instant, secure, and hassle-free payday loans.</p>
+              
+              <div className="video-pills">
+                <span>Fast Approval</span>
+                <span>Bank-Grade Security</span>
+              </div>
+            </div>
           </div>
 
+          {/* RIGHT SIDE - FORM */}
           <div className="auth-form-panel">
-            <div className="auth-form-shell">
-              <div className="auth-panel-top">
-                <div>
-                  <span className="auth-eyebrow">Secure account access</span>
-                  <h3 className="auth-heading">
-                    {type === 'login' ? 'Welcome back' : 'Create your Qua account'}
-                  </h3>
-                  <p className="auth-subheading">
-                    {type === 'login'
-                      ? 'Sign in to continue your application and manage repayments.'
-                      : 'Set up your profile, verify your contact details, and unlock your credit journey.'}
-                  </p>
-                </div>
-
-                <div className="auth-tabs" role="tablist" aria-label="Authentication type">
+            <div className="auth-form-inner">
+              
+              {/* TABS */}
+              <div className="auth-tabs-wrapper">
+                <div className="auth-tabs" role="tablist">
                   <button
                     className={`auth-tab ${type === 'login' ? 'active' : ''}`}
                     onClick={() => handleTypeChange('login')}
@@ -165,37 +162,35 @@ const AuthModal = ({ isOpen, onClose, initialType = 'login' }) => {
                 </div>
               </div>
 
-              <div className="auth-assurance">
-                <span>Instant mobile verification</span>
-                <span>256-bit encrypted credentials</span>
-              </div>
-
+              {/* DYNAMIC FORM AREA */}
               <div className="auth-form-container">
                 {type === 'login' ? (
                   <div className="auth-form-slide">
+                    <div className="auth-header">
+                      <h3 className="auth-heading">Welcome Back</h3>
+                      <p className="auth-subheading">Enter your details to access your dashboard.</p>
+                    </div>
+
                     <form className="auth-form" onSubmit={(event) => event.preventDefault()}>
-                      <label className="input-group">
-                        <span className="input-label">Mobile Number</span>
+                      
+                      <div className="input-group">
+                        <label className="input-label">Mobile Number</label>
                         <div className="input-shell">
-                          <div className="input-icon">
-                            <HiOutlinePhone size={20} />
-                          </div>
+                          <div className="input-icon"><HiOutlinePhone size={20} /></div>
                           <input
                             type="tel"
-                            placeholder="Enter your registered mobile number"
+                            placeholder="Registered mobile number"
                             value={loginForm.mobile}
                             onChange={(event) => updateLoginForm('mobile', event.target.value)}
                             required
                           />
                         </div>
-                      </label>
+                      </div>
 
-                      <label className="input-group">
-                        <span className="input-label">Password</span>
+                      <div className="input-group">
+                        <label className="input-label">Password</label>
                         <div className="input-shell">
-                          <div className="input-icon">
-                            <HiOutlineLockClosed size={20} />
-                          </div>
+                          <div className="input-icon"><HiOutlineLockClosed size={20} /></div>
                           <input
                             type={showLoginPassword ? 'text' : 'password'}
                             placeholder="Enter your password"
@@ -206,13 +201,13 @@ const AuthModal = ({ isOpen, onClose, initialType = 'login' }) => {
                           <button
                             type="button"
                             className="password-toggle"
-                            onClick={() => setShowLoginPassword((current) => !current)}
+                            onClick={() => setShowLoginPassword((curr) => !curr)}
                             aria-label={showLoginPassword ? 'Hide password' : 'Show password'}
                           >
                             {showLoginPassword ? <HiEyeOff size={20} /> : <HiEye size={20} />}
                           </button>
                         </div>
-                      </label>
+                      </div>
 
                       <div className="auth-options">
                         <label className="checkbox-label">
@@ -221,86 +216,76 @@ const AuthModal = ({ isOpen, onClose, initialType = 'login' }) => {
                             checked={loginForm.remember}
                             onChange={(event) => updateLoginForm('remember', event.target.checked)}
                           />
-                          Keep me signed in on this device
+                          Keep me signed in
                         </label>
                         <a href="/" className="forgot-link" onClick={(event) => event.preventDefault()}>
-                          Recover access
+                          Forgot Password?
                         </a>
                       </div>
 
                       <button type="submit" className="btn btn-primary w-100 auth-submit">
-                        Continue Securely
+                        Secure Login
                       </button>
-
-                      <div className="auth-footer-note">
-                        Need a fresh account?{' '}
-                        <button type="button" className="auth-inline-switch" onClick={() => handleTypeChange('signup')}>
-                          Start signup
-                        </button>
-                      </div>
                     </form>
                   </div>
                 ) : (
                   <div className="auth-form-slide">
+                    <div className="auth-header">
+                      <h3 className="auth-heading">Create Account</h3>
+                      <p className="auth-subheading">Takes less than a minute to get started.</p>
+                    </div>
+
                     <form className="auth-form" onSubmit={(event) => event.preventDefault()}>
                       <div className="auth-grid">
-                        <label className="input-group input-group-full">
-                          <span className="input-label">Full Name</span>
+                        <div className="input-group input-group-full">
+                          <label className="input-label">Full Name</label>
                           <div className="input-shell">
-                            <div className="input-icon">
-                              <HiOutlineUser size={20} />
-                            </div>
+                            <div className="input-icon"><HiOutlineUser size={20} /></div>
                             <input
                               type="text"
-                              placeholder="Enter your name as per PAN"
+                              placeholder="Name as per PAN Card"
                               value={signupForm.fullName}
                               onChange={(event) => updateSignupForm('fullName', event.target.value)}
                               required
                             />
                           </div>
-                        </label>
+                        </div>
 
-                        <label className="input-group">
-                          <span className="input-label">Mobile Number</span>
+                        <div className="input-group">
+                          <label className="input-label">Mobile Number</label>
                           <div className="input-shell">
-                            <div className="input-icon">
-                              <HiOutlinePhone size={20} />
-                            </div>
+                            <div className="input-icon"><HiOutlinePhone size={20} /></div>
                             <input
                               type="tel"
-                              placeholder="For OTP verification"
+                              placeholder="For OTP"
                               value={signupForm.mobile}
                               onChange={(event) => updateSignupForm('mobile', event.target.value)}
                               required
                             />
                           </div>
-                        </label>
+                        </div>
 
-                        <label className="input-group">
-                          <span className="input-label">Email Address</span>
+                        <div className="input-group">
+                          <label className="input-label">Email Address</label>
                           <div className="input-shell">
-                            <div className="input-icon">
-                              <HiOutlineMail size={20} />
-                            </div>
+                            <div className="input-icon"><HiOutlineMail size={20} /></div>
                             <input
                               type="email"
-                              placeholder="To receive loan updates"
+                              placeholder="For updates"
                               value={signupForm.email}
                               onChange={(event) => updateSignupForm('email', event.target.value)}
                               required
                             />
                           </div>
-                        </label>
+                        </div>
 
-                        <label className="input-group input-group-full">
-                          <span className="input-label">Create Password</span>
+                        <div className="input-group input-group-full">
+                          <label className="input-label">Create Password</label>
                           <div className="input-shell">
-                            <div className="input-icon">
-                              <HiOutlineLockClosed size={20} />
-                            </div>
+                            <div className="input-icon"><HiOutlineLockClosed size={20} /></div>
                             <input
                               type={showSignupPassword ? 'text' : 'password'}
-                              placeholder="Use 8+ chars with number and symbol"
+                              placeholder="8+ chars with number/symbol"
                               value={signupForm.password}
                               onChange={(event) => updateSignupForm('password', event.target.value)}
                               required
@@ -308,50 +293,41 @@ const AuthModal = ({ isOpen, onClose, initialType = 'login' }) => {
                             <button
                               type="button"
                               className="password-toggle"
-                              onClick={() => setShowSignupPassword((current) => !current)}
-                              aria-label={showSignupPassword ? 'Hide password' : 'Show password'}
+                              onClick={() => setShowSignupPassword((curr) => !curr)}
                             >
                               {showSignupPassword ? <HiEyeOff size={20} /> : <HiEye size={20} />}
                             </button>
                           </div>
-                        </label>
-                      </div>
-
-                      <div className="password-strength">
-                        <div className="strength-meta">
-                          <span>Password strength</span>
-                          <strong>{passwordStrength.label}</strong>
-                        </div>
-                        <div className="strength-track" aria-hidden="true">
-                          <span
-                            className="strength-fill"
-                            style={{ width: `${passwordStrength.score * 25}%` }}
-                          ></span>
                         </div>
                       </div>
 
-                      <label className="checkbox-label checkbox-card">
+                      {signupForm.password && (
+                        <div className="password-strength">
+                          <div className="strength-meta">
+                            <span>Password strength:</span>
+                            <strong>{passwordStrength.label}</strong>
+                          </div>
+                          <div className="strength-track">
+                            <span
+                              className="strength-fill"
+                              style={{ width: `${passwordStrength.score * 25}%` }}
+                            ></span>
+                          </div>
+                        </div>
+                      )}
+
+                      <label className="checkbox-label checkbox-agree">
                         <input
                           type="checkbox"
                           checked={signupForm.consent}
                           onChange={(event) => updateSignupForm('consent', event.target.checked)}
                         />
-                        <span>
-                          I agree to receive account alerts, KYC updates, and important service
-                          communication on my mobile and email.
-                        </span>
+                        <span>I accept the Terms & Conditions and Privacy Policy.</span>
                       </label>
 
                       <button type="submit" className="btn btn-primary w-100 auth-submit">
-                        Verify & Create Account
+                        Verify & Sign Up
                       </button>
-
-                      <div className="auth-footer-note">
-                        Already onboarded?{' '}
-                        <button type="button" className="auth-inline-switch" onClick={() => handleTypeChange('login')}>
-                          Log in here
-                        </button>
-                      </div>
                     </form>
                   </div>
                 )}
