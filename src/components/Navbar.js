@@ -29,11 +29,11 @@ const Navbar = ({ openAuthModal }) => {
           <div className="navbar__logo-icon">
             <svg width="38" height="38" viewBox="0 0 40 40" fill="none">
               <circle cx="20" cy="20" r="18" stroke="#F26622" strokeWidth="2.5" fill="none" />
-              <text x="20" y="26" textAnchor="middle" fill="#F26622" fontWeight="800" fontSize="16" fontFamily="Plus Jakarta Sans, sans-serif">Q</text>
+              <text x="20" y="26" textAnchor="middle" fill="#F26622" fontWeight="800" fontSize="16" fontFamily="Plus Jakarta Sans, sans-serif">K</text>
             </svg>
           </div>
           <div className="navbar__logo-text">
-            <span className="navbar__logo-title">QUA</span>
+            <span className="navbar__logo-title">Kashly</span>
             <span className="navbar__logo-tagline">Quick Urgent Assured</span>
           </div>
         </Link>

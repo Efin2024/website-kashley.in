@@ -28,7 +28,7 @@ const advantageCards = [
   {
     icon: <HiOutlineLightningBolt />,
     title: 'AI-driven underwriting',
-    desc: 'Real-time decisioning allows QUA to move at product speed instead of branch speed.'
+    desc: 'Real-time decisioning allows Kashly to move at product speed instead of branch speed.'
   },
   {
     icon: <HiOutlineShieldCheck />,
@@ -81,7 +81,7 @@ const About = () => {
             <div>
               <h1 className="about-title">We are redesigning how urgent credit feels.</h1>
               <p className="about-subtitle">
-                QUA combines trust, speed, and transparent economics into a calmer lending experience for real-life emergencies. Instead of making users decode finance, we design clarity into the interface itself.
+                Kashly combines trust, speed, and transparent economics into a calmer lending experience for real-life emergencies. Instead of making users decode finance, we design clarity into the interface itself.
               </p>
               <div className="about-hero__ticker" aria-hidden="true">
                 <div className="about-hero__ticker-track">
@@ -101,7 +101,7 @@ const About = () => {
               <div className="about-hero__orb about-hero__orb--two"></div>
               <div className="about-hero__panel glass-panel">
                 <div className="about-hero__panel-top">
-                  <span>QUA confidence layer</span>
+                  <span>Kashly confidence layer</span>
                   <strong>10L+</strong>
                 </div>
                 <div className="about-hero__panel-grid">
@@ -159,7 +159,7 @@ const About = () => {
               <span className="about-story__kicker">Why this matters</span>
               <h2>Credit products should reduce stress, not amplify it.</h2>
               <p>
-                Traditional short-term lending often feels fragmented, uncertain, and overly procedural. QUA is built around one idea: urgent borrowing should feel guided, premium, and understandable from the first tap to repayment.
+                Traditional short-term lending often feels fragmented, uncertain, and overly procedural. Kashly is built around one idea: urgent borrowing should feel guided, premium, and understandable from the first tap to repayment.
               </p>
               <p>
                 That philosophy shapes our product language, our risk communication, our digital verification flow, and the way we surface pricing and timelines.
@@ -184,7 +184,7 @@ const About = () => {
       <section className="about-advantage">
         <div className="container">
           <div className="about-advantage__header">
-            <h2 className="section-title">The QUA Technology Advantage</h2>
+            <h2 className="section-title">The Kashly Technology Advantage</h2>
             <p className="section-subtitle">
               The operational layer behind the visual calm: better underwriting, stronger security, and faster money movement.
             </p>

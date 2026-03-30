@@ -17,7 +17,7 @@ const WhyChoose = () => {
     {
       icon: <HiOutlineUserGroup size={36} />,
       title: "10L+ Customers",
-      desc: "Join a growing community of Indians who trust QUA for their urgent financial needs."
+      desc: "Join a growing community of Indians who trust Kashly for their urgent financial needs."
     },
     {
       icon: <HiOutlineShieldCheck size={36} />,

@@ -226,11 +226,11 @@ const LoanCalculator = () => {
               </div>
               <div className="calc-journey__step">
                 <span>03</span>
-                <p>Move directly into the QUA application flow.</p>
+                <p>Move directly into the Kashly application flow.</p>
               </div>
             </div>
 
-            <a href="https://app.qualoan.com" target="_blank" rel="noopener noreferrer" className="btn btn-primary calc-btn">
+            <a href="https://app.kashlyloan.com" target="_blank" rel="noopener noreferrer" className="btn btn-primary calc-btn">
               <HiLightningBolt size={20} /> Get This Loan Now <HiArrowRight size={18} />
             </a>
           </div>

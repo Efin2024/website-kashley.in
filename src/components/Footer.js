@@ -14,11 +14,11 @@ const Footer = () => {
               <div className="navbar__logo-icon">
                 <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
                   <circle cx="20" cy="20" r="18" stroke="#F26622" strokeWidth="2.5" fill="none"/>
-                  <text x="20" y="26" textAnchor="middle" fill="#F26622" fontWeight="800" fontSize="16" fontFamily="Plus Jakarta Sans, sans-serif">Q</text>
+                  <text x="20" y="26" textAnchor="middle" fill="#F26622" fontWeight="800" fontSize="16" fontFamily="Plus Jakarta Sans, sans-serif">K</text>
                 </svg>
               </div>
               <div className="navbar__logo-text">
-                <span className="navbar__logo-title">QUA</span>
+                <span className="navbar__logo-title">Kashly</span>
                 <span className="navbar__logo-tagline">QUICK URGENT ASSURED</span>
               </div>
             </Link>
@@ -73,7 +73,7 @@ const Footer = () => {
               </li>
               <li>
                 <HiMail className="footer__contact-icon" />
-                <a href="mailto:support@qualoan.com">support@qualoan.com</a>
+                <a href="mailto:support@kashlyloan.com">support@kashlyloan.com</a>
               </li>
             </ul>
             <div className="footer__rbi">
@@ -84,7 +84,7 @@ const Footer = () => {
         </div>
 
         <div className="footer__bottom">
-          <p>&copy; {new Date().getFullYear()} QUA Loan. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Kashly Loan. All rights reserved.</p>
           <div className="footer__bottom-links">
             <Link to="/privacy-policy">Privacy</Link>
             <Link to="/terms-condition">Terms</Link>

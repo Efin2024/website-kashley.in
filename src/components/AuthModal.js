@@ -148,7 +148,7 @@ const AuthModal = ({ isOpen, onClose, initialType = 'login' }) => {
               </div>
               <h2 className="video-title">Fast money should still feel calm, premium, and safe.</h2>
               <p className="video-desc">
-                QUA is designed like a guided product flow, so every login, signup, and verification moment feels clearer and more reassuring.
+                Kashly is designed like a guided product flow, so every login, signup, and verification moment feels clearer and more reassuring.
               </p>
 
               <div className="auth-metric-strip">
@@ -258,7 +258,7 @@ const AuthModal = ({ isOpen, onClose, initialType = 'login' }) => {
                   <div className="auth-form-slide">
                     <div className="auth-header">
                       <span className="auth-kicker">Create your fast lane</span>
-                      <h3 id="auth-modal-title" className="auth-heading">Open your QUA account</h3>
+                      <h3 id="auth-modal-title" className="auth-heading">Open your Kashly account</h3>
                       <p className="auth-subheading">This onboarding flow is built to feel light: essential details, a clear password signal, and no unnecessary friction.</p>
                     </div>
 

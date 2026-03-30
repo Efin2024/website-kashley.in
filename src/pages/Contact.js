@@ -35,7 +35,7 @@ const Contact = () => {
               </div>
               <h1 className="contact-title">Support should feel like a guided concierge layer.</h1>
               <p className="contact-subtitle">
-                Whether you need help with an application, repayment, or account update, QUA support is designed to reduce uncertainty fast and make next steps obvious.
+                Whether you need help with an application, repayment, or account update, Kashly support is designed to reduce uncertainty fast and make next steps obvious.
               </p>
               <div className="contact-hero__ticker" aria-hidden="true">
                 <div className="contact-hero__ticker-track">
@@ -112,7 +112,7 @@ const Contact = () => {
                 <div className="contact-icon-wrapper"><HiOutlineMail size={24} /></div>
                 <div className="contact-text">
                   <span className="contact-label">Email us</span>
-                  <a href="mailto:support@qualoan.com" className="contact-value">support@qualoan.com</a>
+                  <a href="mailto:support@kashlyloan.com" className="contact-value">support@kashlyloan.com</a>
                 </div>
               </div>
 

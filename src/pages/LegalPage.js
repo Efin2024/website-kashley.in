@@ -7,7 +7,7 @@ const legalContentMap = {
     title: 'Terms & Conditions',
     lastUpdated: 'January 15, 2026',
     sections: [
-      { h: '1. Acceptance of Terms', p: "By accessing or using QUA Loan's services, you agree to be bound by these Terms and Conditions. If you do not agree to all terms, you may not access the website or use the services." },
+      { h: '1. Acceptance of Terms', p: "By accessing or using Kashly Loan's services, you agree to be bound by these Terms and Conditions. If you do not agree to all terms, you may not access the website or use the services." },
       { h: '2. Eligibility', p: 'You must be at least 21 years old, an Indian resident, and have a valid bank account and PAN card to use our services.' },
       { h: '3. Loan Application and Disbursement', p: 'All loan applications are subject to approval based on our credit assessment. We reserve the right to reject any application without providing a reason. Disbursal times are estimates and may be affected by banking hours or technical issues.' },
       { h: '4. Repayment Expectations', p: 'You agree to repay the loan amount plus accrued interest of 1% per day on or before the due date stated in your loan agreement. Failure to do so may result in late fees and reporting to credit bureaus.' }
@@ -78,7 +78,7 @@ const LegalPage = ({ page }) => {
             <main className="legal-main">
               <div className="legal-document">
                 <p className="legal-intro">
-                  This document outlines the official {content.title.toLowerCase()} for QUA Loan as presented through our digital product and compliance communication layer. Please review it carefully before proceeding with related actions.
+                  This document outlines the official {content.title.toLowerCase()} for Kashly Loan as presented through our digital product and compliance communication layer. Please review it carefully before proceeding with related actions.
                 </p>
 
                 {content.sections.map((sec, index) => (
@@ -90,7 +90,7 @@ const LegalPage = ({ page }) => {
 
                 <div className="legal-footer">
                   <h4>Questions about this policy?</h4>
-                  <p>Contact our grievance officer at grievance@qualoan.com or call +91 98765 43210.</p>
+                  <p>Contact our grievance officer at grievance@kashlyloan.com or call +91 98765 43210.</p>
                 </div>
               </div>
             </main>
