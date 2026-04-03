@@ -235,6 +235,143 @@
   margin-bottom: 22px;
 }
 
+.auth-progress-card {
+  margin-bottom: 20px;
+  padding: 18px;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at top right, rgba(242, 102, 34, 0.16), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 247, 239, 0.96));
+  border: 1px solid rgba(242, 102, 34, 0.12);
+  box-shadow: 0 18px 40px rgba(242, 102, 34, 0.08);
+}
+
+.auth-progress-card--signup {
+  background:
+    radial-gradient(circle at top right, rgba(61, 188, 255, 0.16), transparent 32%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(244, 250, 255, 0.96));
+}
+
+.auth-progress-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.auth-progress-label {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--text-secondary);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.auth-progress-top strong {
+  color: var(--navy-dark);
+  font-size: 1.08rem;
+}
+
+.auth-progress-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(20, 29, 69, 0.06);
+  color: var(--navy-dark);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.auth-progress-track {
+  height: 12px;
+  margin-bottom: 14px;
+  border-radius: 999px;
+  background: rgba(20, 29, 69, 0.08);
+  overflow: hidden;
+}
+
+.auth-progress-fill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #f26622 0%, #ffb45f 55%, #ffd56d 100%);
+  box-shadow: 0 8px 18px rgba(242, 102, 34, 0.28);
+}
+
+.auth-goals-list {
+  display: grid;
+  gap: 10px;
+}
+
+.auth-goal-item {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  padding: 10px 12px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.auth-goal-item.complete {
+  background: rgba(242, 102, 34, 0.1);
+}
+
+.auth-goal-dot {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  background: rgba(20, 29, 69, 0.08);
+  color: var(--navy-dark);
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.auth-goal-item.complete .auth-goal-dot {
+  background: linear-gradient(135deg, #f26622, #ffb45f);
+  color: white;
+}
+
+.auth-goal-item strong {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--navy-dark);
+  font-size: 0.9rem;
+}
+
+.auth-goal-item span:last-child {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.auth-reward-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.auth-reward-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border-radius: 999px;
+  background: rgba(20, 29, 69, 0.06);
+  color: var(--navy-dark);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
 .auth-kicker {
   display: inline-block;
   margin-bottom: 10px;
@@ -311,12 +448,14 @@
   border: 1px solid rgba(20, 29, 69, 0.12);
   background: rgba(255, 255, 255, 0.76);
   font-size: 0.95rem;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
 .input-shell input:focus {
   background: white;
   border-color: rgba(242, 102, 34, 0.44);
   box-shadow: 0 0 0 4px rgba(242, 102, 34, 0.1);
+  transform: translateY(-1px);
 }
 
 .password-toggle {
@@ -362,6 +501,13 @@
   padding: 16px;
   margin-top: 4px;
   font-size: 0.98rem;
+  background-image: linear-gradient(135deg, #f26622 0%, #ff9347 100%);
+  box-shadow: 0 18px 32px rgba(242, 102, 34, 0.24);
+}
+
+.auth-submit:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 22px 36px rgba(242, 102, 34, 0.3);
 }
 
 .password-strength {
@@ -441,8 +587,13 @@
   }
 
   .auth-grid,
-  .auth-metric-strip {
+  .auth-metric-strip,
+  .auth-progress-top {
     grid-template-columns: 1fr;
+  }
+
+  .auth-progress-top {
+    display: grid;
   }
 
   .auth-tabs {

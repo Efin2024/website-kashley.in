@@ -34,6 +34,18 @@ const leftHighlights = [
   { icon: <HiCheckCircle />, title: 'Transparent pricing', text: 'Clear 1% per day logic with no hidden shocks.' }
 ];
 
+const loginGoals = [
+  { label: 'Identity linked', hint: 'Use your registered number.' },
+  { label: 'Vault unlocked', hint: 'Enter your secure password.' },
+  { label: 'Ready to launch', hint: 'Jump back into your dashboard.' }
+];
+
+const signupRewards = [
+  'Fast-track profile',
+  'OTP priority lane',
+  'Clear pricing unlock'
+];
+
 const AuthModal = ({ isOpen, onClose, initialType = 'login' }) => {
   const [type, setType] = useState(initialType);
   const [isRendered, setIsRendered] = useState(false);
@@ -98,6 +110,28 @@ const AuthModal = ({ isOpen, onClose, initialType = 'login' }) => {
     return levels.find((level) => level.score === score) || { label: 'Weak', score: 1 };
   }, [signupForm.password]);
 
+  const loginCompletion = useMemo(() => {
+    const steps = [
+      loginForm.mobile.trim().length >= 10,
+      loginForm.password.trim().length > 0,
+      loginForm.remember
+    ];
+
+    return Math.round((steps.filter(Boolean).length / steps.length) * 100);
+  }, [loginForm]);
+
+  const signupCompletion = useMemo(() => {
+    const steps = [
+      signupForm.fullName.trim().length > 1,
+      signupForm.mobile.trim().length >= 10,
+      signupForm.email.includes('@'),
+      signupForm.password.length >= 8,
+      signupForm.consent
+    ];
+
+    return Math.round((steps.filter(Boolean).length / steps.length) * 100);
+  }, [signupForm]);
+
   const updateLoginForm = (field, value) => {
     setLoginForm((current) => ({ ...current, [field]: value }));
   };
@@ -148,7 +182,7 @@ const AuthModal = ({ isOpen, onClose, initialType = 'login' }) => {
               </div>
               <h2 className="video-title">Fast money should still feel calm, premium, and safe.</h2>
               <p className="video-desc">
-                Kashly is designed like a guided product flow, so every login, signup, and verification moment feels clearer and more reassuring.
+                Kashley is designed like a guided product flow, so every login, signup, and verification moment feels clearer and more reassuring.
               </p>
 
               <div className="auth-metric-strip">
@@ -202,6 +236,38 @@ const AuthModal = ({ isOpen, onClose, initialType = 'login' }) => {
                       <p className="auth-subheading">Pick up your loan journey, review status updates, and move through repayment or renewal with clarity.</p>
                     </div>
 
+                    <div className="auth-progress-card">
+                      <div className="auth-progress-top">
+                        <div>
+                          <span className="auth-progress-label">Return mission</span>
+                          <strong>{loginCompletion}% ready</strong>
+                        </div>
+                        <span className="auth-progress-badge">Level 2</span>
+                      </div>
+                      <div className="auth-progress-track">
+                        <span className="auth-progress-fill" style={{ width: `${loginCompletion}%` }}></span>
+                      </div>
+                      <div className="auth-goals-list">
+                        {loginGoals.map((goal, index) => {
+                          const complete = index === 0
+                            ? loginForm.mobile.trim().length >= 10
+                            : index === 1
+                              ? loginForm.password.trim().length > 0
+                              : loginForm.remember;
+
+                          return (
+                            <div key={goal.label} className={`auth-goal-item ${complete ? 'complete' : ''}`}>
+                              <span className="auth-goal-dot">{complete ? '✓' : index + 1}</span>
+                              <div>
+                                <strong>{goal.label}</strong>
+                                <span>{goal.hint}</span>
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+
                     <form className="auth-form" onSubmit={(event) => event.preventDefault()}>
                       <div className="input-group">
                         <label className="input-label">Mobile Number</label>
@@ -251,15 +317,36 @@ const AuthModal = ({ isOpen, onClose, initialType = 'login' }) => {
                         <button type="button" className="forgot-link">Forgot password?</button>
                       </div>
 
-                      <button type="submit" className="btn btn-primary w-100 auth-submit">Secure Login</button>
+                      <button type="submit" className="btn btn-primary w-100 auth-submit">Continue Mission</button>
                     </form>
                   </div>
                 ) : (
                   <div className="auth-form-slide">
                     <div className="auth-header">
                       <span className="auth-kicker">Create your fast lane</span>
-                      <h3 id="auth-modal-title" className="auth-heading">Open your Kashly account</h3>
+                      <h3 id="auth-modal-title" className="auth-heading">Open your Kashley account</h3>
                       <p className="auth-subheading">This onboarding flow is built to feel light: essential details, a clear password signal, and no unnecessary friction.</p>
+                    </div>
+
+                    <div className="auth-progress-card auth-progress-card--signup">
+                      <div className="auth-progress-top">
+                        <div>
+                          <span className="auth-progress-label">Onboarding quest</span>
+                          <strong>{signupCompletion}% unlocked</strong>
+                        </div>
+                        <span className="auth-progress-badge">XP Boost</span>
+                      </div>
+                      <div className="auth-progress-track">
+                        <span className="auth-progress-fill" style={{ width: `${signupCompletion}%` }}></span>
+                      </div>
+                      <div className="auth-reward-strip">
+                        {signupRewards.map((reward) => (
+                          <span key={reward} className="auth-reward-pill">
+                            <HiOutlineSparkles />
+                            {reward}
+                          </span>
+                        ))}
+                      </div>
                     </div>
 
                     <form className="auth-form" onSubmit={(event) => event.preventDefault()}>
@@ -345,7 +432,7 @@ const AuthModal = ({ isOpen, onClose, initialType = 'login' }) => {
                         <span>I accept the Terms & Conditions and Privacy Policy.</span>
                       </label>
 
-                      <button type="submit" className="btn btn-primary w-100 auth-submit">Verify & Sign Up</button>
+                      <button type="submit" className="btn btn-primary w-100 auth-submit">Claim Your Spot</button>
                     </form>
                   </div>
                 )}

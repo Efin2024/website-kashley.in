@@ -127,7 +127,7 @@ const StoryFlow = () => {
               <div className="story-flow__device-top">
                 <div className="story-flow__signal">
                   <span className="story-flow__signal-dot"></span>
-                  Kashly fast lane
+                  Kashley fast lane
                 </div>
                 <span className="story-flow__pill">{current.badge}</span>
               </div>

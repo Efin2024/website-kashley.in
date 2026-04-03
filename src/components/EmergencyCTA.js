@@ -29,7 +29,7 @@ const EmergencyCTA = () => {
             </h2>
             
             <p className="emergency-cta__desc">
-              Whether it is a medical bill, urgent repair, or unexpected expense, Kashly is built to calm the chaos. Apply now and get up to ₹1,00,000 sent directly to your bank account within minutes.
+              Whether it is a medical bill, urgent repair, or unexpected expense, Kashley is built to calm the chaos. Apply now and get up to ₹1,00,000 sent directly to your bank account within minutes.
             </p>
 
             <div className="emergency-cta__chips" aria-label="Emergency examples">

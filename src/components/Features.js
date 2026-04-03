@@ -46,7 +46,7 @@ const Features = () => {
             <HiSparkles />
             Premium Borrowing Flow
           </div>
-          <h2 className="section-title">Why Indians Choose Kashly</h2>
+          <h2 className="section-title">Why Indians Choose Kashley</h2>
           <p className="section-subtitle">
             We designed the journey like a four-stage unlock: less friction, more clarity, and visible momentum from application to payout.
           </p>

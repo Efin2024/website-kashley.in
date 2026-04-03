@@ -13,13 +13,14 @@ const Footer = () => {
             <Link to="/" className="navbar__logo footer__logo">
               <div className="navbar__logo-icon">
                 <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
-                  <circle cx="20" cy="20" r="18" stroke="#F26622" strokeWidth="2.5" fill="none"/>
-                  <text x="20" y="26" textAnchor="middle" fill="#F26622" fontWeight="800" fontSize="16" fontFamily="Plus Jakarta Sans, sans-serif">K</text>
+                  <rect x="3" y="3" width="34" height="34" rx="11" fill="#FFF3EC" stroke="#F26622" strokeWidth="2.5" />
+                  <path d="M14 11V29" stroke="#F26622" strokeWidth="3" strokeLinecap="round" />
+                  <path d="M27 12L17 21L27 29" stroke="#F26622" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </div>
               <div className="navbar__logo-text">
-                <span className="navbar__logo-title">Kashly</span>
-                <span className="navbar__logo-tagline">QUICK URGENT ASSURED</span>
+                <span className="navbar__logo-title">Kashley</span>
+                <span className="navbar__logo-tagline">FAST CASH, CLEARLY</span>
               </div>
             </Link>
             <p className="footer__desc">
@@ -73,7 +74,7 @@ const Footer = () => {
               </li>
               <li>
                 <HiMail className="footer__contact-icon" />
-                <a href="mailto:support@kashlyloan.com">support@kashlyloan.com</a>
+                <a href="mailto:support@kashley.com">support@kashley.com</a>
               </li>
             </ul>
             <div className="footer__rbi">
@@ -84,7 +85,7 @@ const Footer = () => {
         </div>
 
         <div className="footer__bottom">
-          <p>&copy; {new Date().getFullYear()} Kashly Loan. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Kashley. All rights reserved.</p>
           <div className="footer__bottom-links">
             <Link to="/privacy-policy">Privacy</Link>
             <Link to="/terms-condition">Terms</Link>

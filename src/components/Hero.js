@@ -30,7 +30,7 @@ const Hero = () => {
           </h1>
           
           <p className="hero__subtitle">
-            Kashly blends the speed of a checkout flow with the calm of a premium product experience. Get up to <span className="highlight-amount">₹1 Lakh</span>, transparent <strong>1% per day pricing</strong>, and a fully digital journey built for real emergencies.
+            Kashley blends the speed of a checkout flow with the calm of a premium product experience. Get up to <span className="highlight-amount">₹1 Lakh</span>, transparent <strong>1% per day pricing</strong>, and a fully digital journey built for real emergencies.
           </p>
 
           <div className="hero__actions">
@@ -74,7 +74,7 @@ const Hero = () => {
           <div className="hero__visual-orbit hero__visual-orbit--one"></div>
           <div className="hero__visual-orbit hero__visual-orbit--two"></div>
           <div className="hero__image-wrapper">
-            <div className="hero__eyebrow">Kashly Fast Lane</div>
+            <div className="hero__eyebrow">Kashley Fast Lane</div>
             <div className="hero__scoreboard">
               <div className="hero__scoreboard-top">
                 <span className="hero__score-label">Approval signal</span>

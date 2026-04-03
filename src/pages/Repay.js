@@ -15,7 +15,7 @@ const Repay = () => {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText('kashlyloan@icici');
+    navigator.clipboard.writeText('kashley@icici');
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -97,7 +97,7 @@ const Repay = () => {
             <div className="upi-id-box">
               <div className="upi-labels">
                 <span className="upi-title">UPI ID</span>
-                <span className="upi-value">kashlyloan@icici</span>
+                <span className="upi-value">kashley@icici</span>
               </div>
               <button className="copy-btn" onClick={handleCopy} aria-label="Copy UPI ID" type="button">
                 {copied ? <HiCheck className="text-green" /> : <HiOutlineDocumentDuplicate />}
