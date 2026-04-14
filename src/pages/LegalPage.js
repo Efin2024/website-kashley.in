@@ -90,7 +90,7 @@ const LegalPage = ({ page }) => {
 
                 <div className="legal-footer">
                   <h4>Questions about this policy?</h4>
-                  <p>Contact our grievance officer at grievance@kashley.com or call +91 98765 43210.</p>
+                  <p>Contact our grievance officer at grievance@kashley.com or call 9999999999.</p>
                 </div>
               </div>
             </main>

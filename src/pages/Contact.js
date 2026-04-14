@@ -104,7 +104,7 @@ const Contact = () => {
                 <div className="contact-icon-wrapper"><HiOutlinePhone size={24} /></div>
                 <div className="contact-text">
                   <span className="contact-label">Call us</span>
-                  <a href="tel:+919876543210" className="contact-value">+91 98765 43210</a>
+                  <a href="tel:9999999999" className="contact-value">9999999999</a>
                 </div>
               </div>
 
@@ -120,7 +120,7 @@ const Contact = () => {
                 <div className="contact-icon-wrapper"><HiOutlineLocationMarker size={24} /></div>
                 <div className="contact-text">
                   <span className="contact-label">Corporate office</span>
-                  <span className="contact-value">2nd Floor, Spaze Edge Tower<br />Sector 47, Gurugram, HR 122018</span>
+                  <span className="contact-value">Gurgaon</span>
                 </div>
               </div>
             </div>
@@ -143,7 +143,7 @@ const Contact = () => {
             <div className="contact-map-wrapper">
               <iframe
                 title="Office Location Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14035.719662706857!2d77.034947!3d28.413795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d228f4ea6c385%3A0xe5a3f1ed16b9b3e9!2sSector%2047%2C%20Gurugram%2C%20Haryana%20122018!5e0!3m2!1sen!2sin!4v1711734293810!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14035.719662706857!2d77.034947!3d28.413795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d228f4ea6c385%3A0xe5a3f1ed16b9b3e9!2sGurgaon%2C%20Haryana!5e0!3m2!1sen!2sin!4v1711734293810!5m2!1sen!2sin"
                 width="100%"
                 height="250"
                 style={{ border: 0 }}
@@ -176,7 +176,7 @@ const Contact = () => {
                 <div className="form-row">
                   <div className="input-group">
                     <label>Phone Number *</label>
-                    <input type="tel" name="phone" placeholder="e.g. +91 98765 43210" value={formData.phone} onChange={handleChange} required />
+                    <input type="tel" name="phone" placeholder="e.g. 9999999999" value={formData.phone} onChange={handleChange} required />
                   </div>
                   <div className="input-group">
                     <label>Subject</label>

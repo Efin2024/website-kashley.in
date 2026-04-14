@@ -66,11 +66,11 @@ const Footer = () => {
             <ul className="footer__contact">
               <li>
                 <HiLocationMarker className="footer__contact-icon" />
-                <span>2nd Floor, Spaze Edge Tower, Sector 47, Gurugram, Haryana, 122018</span>
+                <span>Gurgaon</span>
               </li>
               <li>
                 <HiPhone className="footer__contact-icon" />
-                <a href="tel:+919876543210">+91 98765 43210</a>
+                <a href="tel:9999999999">9999999999</a>
               </li>
               <li>
                 <HiMail className="footer__contact-icon" />
