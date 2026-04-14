@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import AuthModal from './components/AuthModal';
 import FoxMascot from './components/FoxMascot';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -27,23 +26,11 @@ function RouteFoxMascot() {
 }
 
 function App() {
-  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
-  const [authModalType, setAuthModalType] = useState('login');
-
-  const openAuthModal = (type = 'login') => {
-    setAuthModalType(type);
-    setIsAuthModalOpen(true);
-  };
-
-  const closeAuthModal = () => {
-    setIsAuthModalOpen(false);
-  };
-
   return (
     <Router>
       <ScrollToTop />
       <div className="App">
-        <Navbar openAuthModal={openAuthModal} />
+        <Navbar />
         <RouteFoxMascot />
         <main>
           <Routes>
@@ -64,11 +51,6 @@ function App() {
           </Routes>
         </main>
         <Footer />
-        <AuthModal 
-          isOpen={isAuthModalOpen} 
-          onClose={closeAuthModal} 
-          initialType={authModalType} 
-        />
       </div>
     </Router>
   );

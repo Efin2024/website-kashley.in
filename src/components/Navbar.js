@@ -3,7 +3,9 @@ import { Link, NavLink } from 'react-router-dom';
 import { HiMenuAlt3, HiSparkles, HiX } from 'react-icons/hi';
 import './Navbar.css';
 
-const Navbar = ({ openAuthModal }) => {
+const START_NOW_URL = 'https://app.kashley.in/login';
+
+const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -54,8 +56,9 @@ const Navbar = ({ openAuthModal }) => {
               <HiSparkles />
               Fast approvals with transparent pricing
             </div>
-            <button className="btn-login" onClick={() => { closeMenu(); openAuthModal('login'); }}>Login</button>
-            <button className="btn-signup" onClick={() => { closeMenu(); openAuthModal('signup'); }}>Start Now</button>
+            <a className="btn-signup" href={START_NOW_URL} onClick={closeMenu}>
+              Start Now
+            </a>
           </div>
         </div>
 
@@ -64,8 +67,9 @@ const Navbar = ({ openAuthModal }) => {
             <HiSparkles />
             15 min average transfer
           </div>
-          <button className="btn-login" onClick={() => openAuthModal('login')}>Login</button>
-          <button className="btn-signup" onClick={() => openAuthModal('signup')}>Start Now</button>
+          <a className="btn-signup" href={START_NOW_URL}>
+            Start Now
+          </a>
         </div>
 
         <button className="navbar__toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
