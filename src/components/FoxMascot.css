@@ -128,7 +128,7 @@
   align-items: center;
   padding: 6px 10px;
   border-radius: 999px;
-  background: rgba(242, 102, 34, 0.1);
+  background: rgba(124, 58, 237, 0.1);
   color: var(--orange-dark);
   font-size: 0.72rem;
   font-weight: 800;
@@ -205,19 +205,19 @@
 }
 
 .fox-mark__orange {
-  fill: #f26d5b;
+  fill: #8B5CF6;
 }
 
 .fox-mark__orange-light {
-  fill: #f48772;
+  fill: #A78BFA;
 }
 
 .fox-mark__orange-mid {
-  fill: #d65d4d;
+  fill: #7C3AED;
 }
 
 .fox-mark__orange-dark {
-  fill: #c94e46;
+  fill: #5B21B6;
 }
 
 .fox-mark__cream {

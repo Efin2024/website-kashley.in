@@ -1,7 +1,7 @@
 .why-choose {
   padding: 110px 0;
   background:
-    linear-gradient(180deg, #fff 0%, #fff8f1 100%);
+    linear-gradient(180deg, #fff 0%, #f5f0ff 100%);
   border-bottom: 1px solid rgba(20, 29, 69, 0.05);
 }
 
@@ -16,7 +16,7 @@
   margin-bottom: 14px;
   padding: 8px 14px;
   border-radius: 999px;
-  background: rgba(242, 102, 34, 0.08);
+  background: rgba(124, 58, 237, 0.08);
   color: var(--orange-dark);
   font-size: 0.8rem;
   font-weight: 800;
@@ -44,9 +44,9 @@
   padding: 28px 24px;
   border-radius: 28px;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 238, 226, 0.84));
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(245, 240, 255, 0.84));
   text-align: left;
-  border: 1px solid rgba(242, 102, 34, 0.1);
+  border: 1px solid rgba(124, 58, 237, 0.1);
   box-shadow: 0 18px 50px rgba(20, 29, 69, 0.08);
   transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
 }
@@ -54,7 +54,7 @@
 .why-choose__card:hover {
   transform: translateY(-10px);
   box-shadow: 0 28px 68px rgba(20, 29, 69, 0.14);
-  border-color: rgba(242, 102, 34, 0.28);
+  border-color: rgba(124, 58, 237, 0.28);
 }
 
 .why-choose__step {
@@ -85,7 +85,7 @@
 }
 
 .why-choose__card:hover .why-choose__icon {
-  background: linear-gradient(135deg, #f26622, #ffb55c);
+  background: linear-gradient(135deg, #7c3aed, #c4b5fd);
   color: white;
   transform: rotate(-6deg) scale(1.04);
 }
@@ -113,7 +113,7 @@
   border-radius: 32px;
   overflow: hidden;
   background:
-    radial-gradient(circle at 0% 0%, rgba(255, 186, 121, 0.18), transparent 24%),
+    radial-gradient(circle at 0% 0%, rgba(196, 181, 253, 0.18), transparent 24%),
     linear-gradient(135deg, #151e48 0%, #1f2d68 55%, #2d3e7a 100%);
   box-shadow: 0 28px 70px rgba(20, 29, 69, 0.2);
 }
@@ -126,7 +126,7 @@
   width: 220px;
   height: 220px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 163, 92, 0.24), transparent 68%);
+    background: radial-gradient(circle, rgba(124, 58, 237, 0.24), transparent 68%);
 }
 
 .stat-item {
@@ -140,7 +140,7 @@
 
 .stat-value {
   margin-bottom: 6px;
-  color: #ffb55c;
+  color: #C4B5FD;
   font-family: var(--font-display);
   font-size: 3rem;
   font-weight: 800;

@@ -84,7 +84,7 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 20% 20%, rgba(242, 102, 34, 0.24), transparent 26%),
+    radial-gradient(circle at 20% 20%, rgba(124, 58, 237, 0.24), transparent 26%),
     linear-gradient(180deg, rgba(17, 25, 63, 0.2), rgba(17, 25, 63, 0.95));
 }
 
@@ -180,7 +180,7 @@
   height: 42px;
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.12);
-  color: #ffb55c;
+  color: #C4B5FD;
   font-size: 1.1rem;
 }
 
@@ -198,7 +198,7 @@
 
 .auth-form-panel {
   padding: 44px 40px;
-  background: linear-gradient(180deg, #fff 0%, #fff9f2 100%);
+  background: linear-gradient(180deg, #fff 0%, #f5f0ff 100%);
   overflow-y: auto;
 }
 
@@ -240,10 +240,10 @@
   padding: 18px;
   border-radius: 24px;
   background:
-    radial-gradient(circle at top right, rgba(242, 102, 34, 0.16), transparent 34%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 247, 239, 0.96));
-  border: 1px solid rgba(242, 102, 34, 0.12);
-  box-shadow: 0 18px 40px rgba(242, 102, 34, 0.08);
+    radial-gradient(circle at top right, rgba(124, 58, 237, 0.16), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(245, 240, 255, 0.96));
+  border: 1px solid rgba(124, 58, 237, 0.12);
+  box-shadow: 0 18px 40px rgba(124, 58, 237, 0.08);
 }
 
 .auth-progress-card--signup {
@@ -301,8 +301,8 @@
   display: block;
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, #f26622 0%, #ffb45f 55%, #ffd56d 100%);
-  box-shadow: 0 8px 18px rgba(242, 102, 34, 0.28);
+  background: linear-gradient(90deg, #7c3aed 0%, #a78bfa 55%, #ddd6fe 100%);
+  box-shadow: 0 8px 18px rgba(124, 58, 237, 0.28);
 }
 
 .auth-goals-list {
@@ -321,7 +321,7 @@
 }
 
 .auth-goal-item.complete {
-  background: rgba(242, 102, 34, 0.1);
+  background: rgba(124, 58, 237, 0.1);
 }
 
 .auth-goal-dot {
@@ -337,7 +337,7 @@
 }
 
 .auth-goal-item.complete .auth-goal-dot {
-  background: linear-gradient(135deg, #f26622, #ffb45f);
+  background: linear-gradient(135deg, #7c3aed, #a78bfa);
   color: white;
 }
 
@@ -453,8 +453,8 @@
 
 .input-shell input:focus {
   background: white;
-  border-color: rgba(242, 102, 34, 0.44);
-  box-shadow: 0 0 0 4px rgba(242, 102, 34, 0.1);
+  border-color: rgba(124, 58, 237, 0.44);
+  box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.1);
   transform: translateY(-1px);
 }
 
@@ -501,13 +501,13 @@
   padding: 16px;
   margin-top: 4px;
   font-size: 0.98rem;
-  background-image: linear-gradient(135deg, #f26622 0%, #ff9347 100%);
-  box-shadow: 0 18px 32px rgba(242, 102, 34, 0.24);
+  background-image: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+  box-shadow: 0 18px 32px rgba(124, 58, 237, 0.24);
 }
 
 .auth-submit:hover {
   transform: translateY(-2px) scale(1.01);
-  box-shadow: 0 22px 36px rgba(242, 102, 34, 0.3);
+  box-shadow: 0 22px 36px rgba(124, 58, 237, 0.3);
 }
 
 .password-strength {
@@ -538,7 +538,7 @@
   display: block;
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, #f26622 0%, #ffb36f 100%);
+  background: linear-gradient(90deg, #7c3aed 0%, #c4b5fd 100%);
 }
 
 .auth-form-slide {

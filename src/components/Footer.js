@@ -13,9 +13,9 @@ const Footer = () => {
             <Link to="/" className="navbar__logo footer__logo">
               <div className="navbar__logo-icon">
                 <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
-                  <rect x="3" y="3" width="34" height="34" rx="11" fill="#FFF3EC" stroke="#F26622" strokeWidth="2.5" />
-                  <path d="M14 11V29" stroke="#F26622" strokeWidth="3" strokeLinecap="round" />
-                  <path d="M27 12L17 21L27 29" stroke="#F26622" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                  <rect x="3" y="3" width="34" height="34" rx="11" fill="#F5F0FF" stroke="#7C3AED" strokeWidth="2.5" />
+                  <path d="M14 11V29" stroke="#7C3AED" strokeWidth="3" strokeLinecap="round" />
+                  <path d="M27 12L17 21L27 29" stroke="#7C3AED" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </div>
               <div className="navbar__logo-text">

@@ -8,13 +8,13 @@
 
 /* Selection styling */
 ::selection {
-  background: rgba(242, 102, 34, 0.15);
-  color: var(--navy-500);
+  background: rgba(124, 58, 237, 0.15);
+  color: var(--navy-dark);
 }
 
 /* Focus styles for accessibility */
 :focus-visible {
-  outline: 2px solid var(--orange-500);
+  outline: 2px solid var(--orange);
   outline-offset: 2px;
   border-radius: 4px;
 }
@@ -25,7 +25,7 @@
   top: -100%;
   left: 16px;
   padding: 12px 24px;
-  background: var(--orange-500);
+  background: var(--orange);
   color: white;
   font-weight: 600;
   border-radius: var(--radius-md);

@@ -2,8 +2,8 @@
   position: relative;
   padding: 120px 0;
   background:
-    radial-gradient(circle at 85% 10%, rgba(242, 102, 34, 0.12), transparent 24%),
-    linear-gradient(180deg, #fff9f3 0%, #ffffff 100%);
+    radial-gradient(circle at 85% 10%, rgba(124, 58, 237, 0.12), transparent 24%),
+    linear-gradient(180deg, #faf5ff 0%, #ffffff 100%);
 }
 
 .story-flow__intro {
@@ -53,7 +53,7 @@
 .story-flow__step--active {
   opacity: 1;
   transform: scale(1);
-  border-color: rgba(242, 102, 34, 0.24);
+  border-color: rgba(124, 58, 237, 0.24);
 }
 
 .story-flow__step-kicker {
@@ -62,7 +62,7 @@
   margin-bottom: 14px;
   padding: 7px 11px;
   border-radius: 999px;
-  background: rgba(242, 102, 34, 0.1);
+  background: rgba(124, 58, 237, 0.1);
   color: var(--orange-dark);
   font-size: 0.76rem;
   font-weight: 800;
@@ -105,7 +105,7 @@
   width: 260px;
   height: 260px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(242, 102, 34, 0.2), transparent 68%);
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.2), transparent 68%);
 }
 
 .story-flow__device-top {
@@ -216,7 +216,7 @@
   height: 100%;
   border-radius: inherit;
   background: var(--gradient-premium-warm);
-  box-shadow: 0 0 18px rgba(242, 102, 34, 0.35);
+  box-shadow: 0 0 18px rgba(124, 58, 237, 0.35);
   transition: width var(--transition-cinematic);
 }
 
@@ -274,7 +274,7 @@
 
 .story-flow__timeline-step--active {
   transform: translateX(6px);
-  border-color: rgba(242, 102, 34, 0.22);
+  border-color: rgba(124, 58, 237, 0.22);
 }
 
 .story-flow__timeline-node {
@@ -289,7 +289,7 @@
 }
 
 .story-flow__timeline-step--done .story-flow__timeline-node {
-  background: rgba(242, 102, 34, 0.12);
+  background: rgba(124, 58, 237, 0.12);
   color: var(--orange-dark);
 }
 

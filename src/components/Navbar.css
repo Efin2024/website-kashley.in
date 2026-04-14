@@ -89,7 +89,7 @@
 .navbar__link:hover,
 .navbar__link--active {
   color: var(--navy-dark);
-  background: rgba(242, 102, 34, 0.1);
+  background: rgba(124, 58, 237, 0.1);
 }
 
 .navbar__auth {

@@ -5,8 +5,8 @@
 .faq-hero {
   padding: 54px 0 34px;
   background:
-    radial-gradient(circle at 85% 15%, rgba(242, 102, 34, 0.1), transparent 20%),
-    linear-gradient(180deg, #fff9f3 0%, transparent 100%);
+    radial-gradient(circle at 85% 15%, rgba(124, 58, 237, 0.1), transparent 20%),
+    linear-gradient(180deg, #f5f0ff 0%, transparent 100%);
 }
 
 .faq-hero__content {
@@ -52,7 +52,7 @@
 .faq-side-panel__kicker {
   display: inline-block;
   margin-bottom: 12px;
-  color: #ffb55c;
+  color: #C4B5FD;
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.08em;

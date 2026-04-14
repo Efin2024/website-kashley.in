@@ -6,8 +6,8 @@
   padding: 54px 0 46px;
   overflow: hidden;
   background:
-    radial-gradient(circle at 10% 15%, rgba(242, 102, 34, 0.12), transparent 22%),
-    linear-gradient(180deg, #fff9f3 0%, transparent 100%);
+    radial-gradient(circle at 10% 15%, rgba(124, 58, 237, 0.12), transparent 22%),
+    linear-gradient(180deg, #f5f0ff 0%, transparent 100%);
 }
 
 .contact-hero__grid {
@@ -233,7 +233,7 @@
   height: 52px;
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.12);
-  color: #ffb55c;
+  color: #C4B5FD;
 }
 
 .contact-label {
@@ -280,7 +280,7 @@
   height: 38px;
   border-radius: 12px;
   background: rgba(255,255,255,0.1);
-  color: #ffb55c;
+  color: #C4B5FD;
   font-size: 0.84rem;
   font-weight: 800;
 }

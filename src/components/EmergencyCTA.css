@@ -1,8 +1,8 @@
 .emergency-cta {
   padding: 110px 0 120px;
   background:
-    radial-gradient(circle at 85% 10%, rgba(242, 102, 34, 0.12), transparent 24%),
-    linear-gradient(180deg, #fdf6ef 0%, #fff 100%);
+    radial-gradient(circle at 85% 10%, rgba(124, 58, 237, 0.12), transparent 24%),
+    linear-gradient(180deg, #f5f0ff 0%, #fff 100%);
 }
 
 .emergency-cta__card {
@@ -29,7 +29,7 @@
   left: -30px;
   width: 260px;
   height: 260px;
-  background: radial-gradient(circle, rgba(255, 180, 92, 0.3), transparent 68%);
+  background: radial-gradient(circle, rgba(196, 181, 253, 0.3), transparent 68%);
 }
 
 .emergency-cta__glow--two {
@@ -37,7 +37,7 @@
   bottom: -90px;
   width: 320px;
   height: 320px;
-  background: radial-gradient(circle, rgba(76, 110, 245, 0.18), transparent 70%);
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.18), transparent 70%);
 }
 
 .emergency-cta__content,
@@ -51,7 +51,7 @@
 }
 
 .text-orange {
-  color: #ffb55c;
+  color: #C4B5FD;
 }
 
 .emergency-cta__title {
@@ -93,7 +93,7 @@
 }
 
 .emergency-cta__chip svg {
-  color: #ffb55c;
+  color: #C4B5FD;
 }
 
 .emergency-cta__list {
@@ -182,7 +182,7 @@
   width: 92%;
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, #ffb55c, #f26622);
+  background: linear-gradient(90deg, #C4B5FD, #7C3AED);
   animation: pulse 3.4s ease-in-out infinite;
 }
 

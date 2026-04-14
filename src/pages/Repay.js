@@ -83,12 +83,12 @@ const Repay = () => {
               <div className="qr-placeholder">
                 <svg width="150" height="150" viewBox="0 0 100 100">
                   <path fill="#1E2A5E" d="M0 0h30v30H0zM10 10h10v10H10zM70 0h30v30H70zM80 10h10v10H80zM0 70h30v30H0zM10 80h10v10H10zM40 0h20v20H40zM30 40h40v20H30zM70 70h30v10H70zM70 90h10v10H70zM90 80h10v10H90z" />
-                  <rect x="15" y="40" width="10" height="10" fill="#F26622" />
+                  <rect x="15" y="40" width="10" height="10" fill="#7C3AED" />
                   <rect x="15" y="55" width="10" height="10" fill="#1E2A5E" />
                   <rect x="40" y="30" width="10" height="10" fill="#1E2A5E" />
-                  <rect x="55" y="30" width="10" height="10" fill="#F26622" />
+                  <rect x="55" y="30" width="10" height="10" fill="#7C3AED" />
                   <rect x="40" y="70" width="10" height="10" fill="#1E2A5E" />
-                  <rect x="40" y="85" width="10" height="10" fill="#F26622" />
+                  <rect x="40" y="85" width="10" height="10" fill="#7C3AED" />
                   <rect x="55" y="70" width="10" height="25" fill="#1E2A5E" />
                 </svg>
               </div>

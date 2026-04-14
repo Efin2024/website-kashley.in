@@ -3,7 +3,7 @@
   padding: 96px 0 28px;
   color: white;
   background:
-    radial-gradient(circle at 0% 0%, rgba(255, 182, 101, 0.18), transparent 24%),
+    radial-gradient(circle at 0% 0%, rgba(167, 139, 250, 0.18), transparent 24%),
     linear-gradient(145deg, #10183e 0%, #151f4f 55%, #1e2a5e 100%);
   overflow: hidden;
 }
@@ -16,7 +16,7 @@
   width: 320px;
   height: 320px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(242, 102, 34, 0.2), transparent 70%);
+    background: radial-gradient(circle, rgba(124, 58, 237, 0.2), transparent 70%);
 }
 
 .footer__grid {
@@ -70,7 +70,7 @@
 
 .footer__socials a:hover,
 .footer__socials button:hover {
-  background: rgba(242, 102, 34, 0.84);
+  background: rgba(124, 58, 237, 0.84);
   transform: translateY(-4px);
 }
 
@@ -113,7 +113,7 @@
 }
 
 .footer__contact-icon {
-  color: #ffb55c;
+  color: #C4B5FD;
   font-size: 1.1rem;
   flex-shrink: 0;
   margin-top: 4px;

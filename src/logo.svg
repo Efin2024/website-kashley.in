@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="Kashley logo">
-  <rect x="12" y="12" width="136" height="136" rx="42" fill="#FFF3EC" stroke="#F26622" stroke-width="10"/>
-  <path d="M58 42V118" fill="none" stroke="#F26622" stroke-width="14" stroke-linecap="round"/>
-  <path d="M108 46L70 80L108 114" fill="none" stroke="#F26622" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="12" y="12" width="136" height="136" rx="42" fill="#F5F0FF" stroke="#7C3AED" stroke-width="10"/>
+  <path d="M58 42V118" fill="none" stroke="#7C3AED" stroke-width="14" stroke-linecap="round"/>
+  <path d="M108 46L70 80L108 114" fill="none" stroke="#7C3AED" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

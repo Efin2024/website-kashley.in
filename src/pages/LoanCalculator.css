@@ -6,8 +6,8 @@
   padding: 54px 0 46px;
   overflow: hidden;
   background:
-    radial-gradient(circle at 90% 10%, rgba(242, 102, 34, 0.12), transparent 22%),
-    linear-gradient(180deg, #fff9f3 0%, transparent 100%);
+    radial-gradient(circle at 90% 10%, rgba(124, 58, 237, 0.12), transparent 22%),
+    linear-gradient(180deg, #f5f0ff 0%, transparent 100%);
 }
 
 .calculator-hero__grid {
@@ -271,7 +271,7 @@
 .calc-value {
   padding: 10px 14px;
   border-radius: 16px;
-  background: rgba(242, 102, 34, 0.1);
+  background: rgba(124, 58, 237, 0.1);
   color: var(--orange-dark);
   font-family: var(--font-display);
   font-size: 1.2rem;
@@ -322,7 +322,7 @@
 .calc-results-kicker {
   display: inline-block;
   margin-bottom: 10px;
-  color: #ffb55c;
+  color: #C4B5FD;
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -366,7 +366,7 @@
 }
 
 .result-value.highlight {
-  color: #ffb55c;
+  color: #C4B5FD;
 }
 
 .total-repayment {
@@ -375,7 +375,7 @@
 
 .total-repayment .result-value {
   font-size: 2.2rem;
-  color: #ffb55c;
+  color: #C4B5FD;
 }
 
 .result-subtext {
@@ -435,7 +435,7 @@
   height: 38px;
   border-radius: 12px;
   background: rgba(255,255,255,0.1);
-  color: #ffb55c;
+  color: #C4B5FD;
   font-size: 0.84rem;
   font-weight: 800;
 }

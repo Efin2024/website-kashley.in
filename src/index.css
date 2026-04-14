@@ -2,18 +2,18 @@
 
 :root {
   /* Core Colors */
-  --orange: #F26622;
-  --orange-light: #FF8A50;
-  --orange-dark: #D4510F;
+  --orange: #7C3AED;
+  --orange-light: #A78BFA;
+  --orange-dark: #5B21B6;
   --navy: #1E2A5E;
   --navy-light: #2D3E7A;
   --navy-dark: #141D45;
   
   /* Backgrounds */
-  --bg-cream: #FDF5EE;
-  --bg-cream-dark: #F5E8DA;
+  --bg-cream: #F8F5FF;
+  --bg-cream-dark: #E9D5FF;
   --bg-white: #FFFFFF;
-  --bg-section: #FBF3EB;
+  --bg-section: #F5F0FF;
   
   /* Text */
   --text-primary: #1A1A2E;
@@ -23,21 +23,21 @@
   --text-on-orange: #FFFFFF;
   
   /* Gradients */
-  --gradient-orange: linear-gradient(135deg, #F26622, #FF8A50);
+  --gradient-orange: linear-gradient(135deg, #7C3AED, #A78BFA);
   --gradient-navy: linear-gradient(135deg, #1E2A5E, #2D3E7A);
-  --gradient-hero: linear-gradient(135deg, #FDF5EE 0%, #FFE8D6 50%, #FDF5EE 100%);
-  --gradient-card-border: linear-gradient(135deg, #F26622, #1E2A5E);
-  --gradient-footer: linear-gradient(135deg, #FFF5ED 0%, #FFE8D6 100%);
-  --gradient-glass: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(255, 247, 240, 0.68));
+  --gradient-hero: linear-gradient(135deg, #FAF5FF 0%, #E9D5FF 50%, #FAF5FF 100%);
+  --gradient-card-border: linear-gradient(135deg, #7C3AED, #1E2A5E);
+  --gradient-footer: linear-gradient(135deg, #F8F5FF 0%, #E9D5FF 100%);
+  --gradient-glass: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(245, 240, 255, 0.68));
   --gradient-premium-dark: linear-gradient(135deg, #151e48 0%, #1f2d68 55%, #2d3e7a 100%);
-  --gradient-premium-warm: linear-gradient(135deg, #f26622 0%, #ff9d5a 50%, #ffd08d 100%);
+  --gradient-premium-warm: linear-gradient(135deg, #7c3aed 0%, #a78bfa 50%, #ddd6fe 100%);
   
   /* Shadows */
   --shadow-sm: 0 2px 8px rgba(30, 42, 94, 0.06);
   --shadow-md: 0 4px 20px rgba(30, 42, 94, 0.1);
   --shadow-lg: 0 8px 40px rgba(30, 42, 94, 0.15);
   --shadow-xl: 0 16px 60px rgba(30, 42, 94, 0.2);
-  --shadow-orange: 0 4px 20px rgba(242, 102, 34, 0.3);
+  --shadow-orange: 0 4px 20px rgba(124, 58, 237, 0.3);
   --shadow-card: 0 4px 24px rgba(30, 42, 94, 0.08);
   --shadow-glass: 0 20px 60px rgba(20, 29, 69, 0.12);
   
@@ -79,7 +79,7 @@ body {
   font-family: var(--font-body);
   color: var(--text-primary);
   background:
-    linear-gradient(180deg, #fffdf9 0%, #fdf5ee 35%, #fff8f1 100%);
+    linear-gradient(180deg, #ffffff 0%, #faf5ff 35%, #f5f0ff 100%);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -126,7 +126,7 @@ input, textarea, select {
 
 input:focus, textarea:focus, select:focus {
   border-color: var(--orange);
-  box-shadow: 0 0 0 3px rgba(242, 102, 34, 0.15);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
 }
 
 ::selection {
@@ -186,7 +186,7 @@ input:focus, textarea:focus, select:focus {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 30px rgba(242, 102, 34, 0.4);
+  box-shadow: 0 6px 30px rgba(124, 58, 237, 0.4);
 }
 
 .btn-primary:active {
