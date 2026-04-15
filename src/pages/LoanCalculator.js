@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { HiArrowRight, HiInformationCircle, HiLightningBolt, HiSparkles } from 'react-icons/hi';
 import './LoanCalculator.css';
 
@@ -226,13 +227,13 @@ const LoanCalculator = () => {
               </div>
               <div className="calc-journey__step">
                 <span>03</span>
-                <p>Move directly into the Kashley application flow.</p>
+                <p>Move directly into the Kashle application flow.</p>
               </div>
             </div>
 
-            <a href="https://app.kashley.com" target="_blank" rel="noopener noreferrer" className="btn btn-primary calc-btn">
+            <Link to="/login" className="btn btn-primary calc-btn">
               <HiLightningBolt size={20} /> Get This Loan Now <HiArrowRight size={18} />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

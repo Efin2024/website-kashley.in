@@ -35,7 +35,7 @@ const Contact = () => {
               </div>
               <h1 className="contact-title">Support should feel like a guided concierge layer.</h1>
               <p className="contact-subtitle">
-                Whether you need help with an application, repayment, or account update, Kashley support is designed to reduce uncertainty fast and make next steps obvious.
+                Whether you need help with an application, repayment, or account update, Kashle support is designed to reduce uncertainty fast and make next steps obvious.
               </p>
               <div className="contact-hero__ticker" aria-hidden="true">
                 <div className="contact-hero__ticker-track">

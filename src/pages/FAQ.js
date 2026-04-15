@@ -9,11 +9,11 @@ const FAQ = () => {
   const faqs = [
     {
       q: 'What is an instant payday loan?',
-      a: 'An instant payday loan is a short-term unsecured personal loan designed to cover urgent expenses until your next payday. Kashley sends approved funds directly to your bank account.'
+      a: 'An instant payday loan is a short-term unsecured personal loan designed to cover urgent expenses until your next payday. Kashle sends approved funds directly to your bank account.'
     },
     {
       q: 'How much loan can I get?',
-      a: 'Kashley provides instant loans ranging from ₹5,000 to ₹1,00,000 depending on income, credit history, and internal risk checks.'
+      a: 'Kashle provides instant loans ranging from ₹5,000 to ₹1,00,000 depending on income, credit history, and internal risk checks.'
     },
     {
       q: 'What is the interest rate?',

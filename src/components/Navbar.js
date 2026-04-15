@@ -3,8 +3,6 @@ import { Link, NavLink } from 'react-router-dom';
 import { HiMenuAlt3, HiSparkles, HiX } from 'react-icons/hi';
 import './Navbar.css';
 
-const START_NOW_URL = 'https://app.kashley.in/login';
-
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -36,7 +34,7 @@ const Navbar = () => {
             </svg>
           </div>
           <div className="navbar__logo-text">
-            <span className="navbar__logo-title">Kashley</span>
+            <span className="navbar__logo-title">Kashle</span>
             <span className="navbar__logo-tagline">Fast cash, clearly</span>
           </div>
         </Link>
@@ -56,9 +54,9 @@ const Navbar = () => {
               <HiSparkles />
               Fast approvals with transparent pricing
             </div>
-            <a className="btn-signup" href={START_NOW_URL} onClick={closeMenu}>
+            <Link className="btn-signup" to="/login" onClick={closeMenu}>
               Start Now
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -67,9 +65,9 @@ const Navbar = () => {
             <HiSparkles />
             15 min average transfer
           </div>
-          <a className="btn-signup" href={START_NOW_URL}>
+          <Link className="btn-signup" to="/login">
             Start Now
-          </a>
+          </Link>
         </div>
 
         <button className="navbar__toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">

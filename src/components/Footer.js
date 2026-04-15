@@ -19,7 +19,7 @@ const Footer = () => {
                 </svg>
               </div>
               <div className="navbar__logo-text">
-                <span className="navbar__logo-title">Kashley</span>
+                <span className="navbar__logo-title">Kashle</span>
                 <span className="navbar__logo-tagline">FAST CASH, CLEARLY</span>
               </div>
             </Link>
@@ -85,7 +85,7 @@ const Footer = () => {
         </div>
 
         <div className="footer__bottom">
-          <p>&copy; {new Date().getFullYear()} Kashley. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Kashle. All rights reserved.</p>
           <div className="footer__bottom-links">
             <Link to="/privacy-policy">Privacy</Link>
             <Link to="/terms-condition">Terms</Link>

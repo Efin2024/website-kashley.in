@@ -8,6 +8,7 @@ import About from './pages/About';
 import LoanCalculator from './pages/LoanCalculator';
 import Contact from './pages/Contact';
 import FAQ from './pages/FAQ';
+import LoginPage from './pages/LoginPage';
 import Repay from './pages/Repay';
 import LegalPage from './pages/LegalPage';
 import './App.css';
@@ -26,12 +27,14 @@ function RouteFoxMascot() {
 }
 
 function App() {
+  const { pathname } = useLocation();
+  const isLoginRoute = pathname === '/login';
+
   return (
-    <Router>
-      <ScrollToTop />
+    <>
       <div className="App">
-        <Navbar />
-        <RouteFoxMascot />
+        {!isLoginRoute && <Navbar />}
+        {!isLoginRoute && <RouteFoxMascot />}
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -39,6 +42,7 @@ function App() {
             <Route path="/loan-calculator" element={<LoanCalculator />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/faq" element={<FAQ />} />
+            <Route path="/login" element={<LoginPage />} />
             <Route path="/repay" element={<Repay />} />
             <Route path="/terms-condition" element={<LegalPage page="terms" />} />
             <Route path="/privacy-policy" element={<LegalPage page="privacy" />} />
@@ -50,10 +54,17 @@ function App() {
             <Route path="/cancellation-refund-policy" element={<LegalPage page="refund" />} />
           </Routes>
         </main>
-        <Footer />
+        {!isLoginRoute && <Footer />}
       </div>
-    </Router>
+    </>
   );
 }
 
-export default App;
+export default function AppWithRouter() {
+  return (
+    <Router>
+      <ScrollToTop />
+      <App />
+    </Router>
+  );
+}
