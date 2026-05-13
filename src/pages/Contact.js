@@ -112,7 +112,7 @@ const Contact = () => {
                 <div className="contact-icon-wrapper"><HiOutlineMail size={24} /></div>
                 <div className="contact-text">
                   <span className="contact-label">Email us</span>
-                  <a href="mailto:support@kashley.com" className="contact-value">support@kashley.com</a>
+                  <a href="mailto:support@kashle.com" className="contact-value">support@kashle.com</a>
                 </div>
               </div>
 
