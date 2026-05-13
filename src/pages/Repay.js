@@ -97,7 +97,7 @@ const Repay = () => {
             <div className="upi-id-box">
               <div className="upi-labels">
                 <span className="upi-title">UPI ID</span>
-                <span className="upi-value">kashley@icici</span>
+                <span className="upi-value">kashle@icici</span>
               </div>
               <button className="copy-btn" onClick={handleCopy} aria-label="Copy UPI ID" type="button">
                 {copied ? <HiCheck className="text-green" /> : <HiOutlineDocumentDuplicate />}

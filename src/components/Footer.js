@@ -74,7 +74,7 @@ const Footer = () => {
               </li>
               <li>
                 <HiMail className="footer__contact-icon" />
-                <a href="mailto:support@kashley.com">support@kashley.com</a>
+                <a href="mailto:support@kashle.com">support@kashle.com</a>
               </li>
             </ul>
             <div className="footer__rbi">
